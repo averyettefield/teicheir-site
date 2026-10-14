@@ -812,3 +812,11 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .paper-lead-photo{object-position:center 20%;}
 .homepage-booklets .paper-lead-photo{height:180px;object-position:center 17%;}
 .homepage-booklets .newspaper-controls #newspaper-prev,.homepage-booklets .newspaper-controls #newspaper-next,.homepage-booklets .newspaper-controls #newspaper-prev:hover,.homepage-booklets .newspaper-controls #newspaper-next:hover{background:transparent!important;}
+/* Uploaded magazine artwork and matching cream paper turns across the shelf. */
+.homepage-booklets .traditional-booklet .booklet-leaf{scrollbar-width:none;}.homepage-booklets .traditional-booklet .booklet-leaf::-webkit-scrollbar{display:none;}
+.homepage-booklets .booklet-controls .booklet-prev,.homepage-booklets .booklet-controls .booklet-next,.homepage-booklets .booklet-controls .booklet-prev:hover,.homepage-booklets .booklet-controls .booklet-next:hover{background:transparent!important;}
+.homepage-booklets .booklet-controls .booklet-next::before{background:linear-gradient(135deg,transparent 49%,#e5e2da 50%,#fffdf6 57%)!important;}
+.homepage-booklets .booklet-controls .booklet-prev::before{background:linear-gradient(225deg,transparent 49%,#e5e2da 50%,#fffdf6 57%)!important;}
+.homepage-booklets .booklet-controls button:disabled{visibility:hidden;pointer-events:none;}
+.homepage-booklets .magazine-image-cover{padding:0;background:#fff;overflow:hidden;}
+.homepage-booklets .magazine-image-cover img.magazine-cover-art{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;border:0;object-fit:contain;transform:none;}
