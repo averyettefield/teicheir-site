@@ -667,3 +667,5 @@ body{font-size:19px;line-height:1.6;}
 .camera-screen{left:31.5%;top:35.1%;width:36.8%;height:35.4%;background:#101010;border-radius:2px;}
 .newspaper-pages{min-height:800px;}
 @media(max-width:760px){.newspaper-pages{min-height:830px;}.paper-columns article:nth-child(2){display:block;}.paper-columns aside{grid-column:2;grid-row:1 / span 2;}}
+@media(max-width:760px){.newspaper-pages{min-height:920px;}}
+@media(max-width:360px){.newspaper-pages{min-height:1100px;}.paper-masthead{font-size:25px;}}
