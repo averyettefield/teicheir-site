@@ -810,3 +810,4 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .guest-book-shelf{padding-bottom:8px;}.guest-signing{padding-top:8px;padding-bottom:35px;}.guest-signing h2{margin-top:0;}.guest-signing>p:first-of-type{margin-bottom:12px;}
 .heart-brief .brief-list li{padding:3px 0;border:0;margin-bottom:5px;}.heart-brief .draft-note{max-width:230px;margin-inline:auto;}.heart-brief-content{padding-top:105px;}.heart-brief .text-link{display:inline-block;max-width:180px;}
 .homepage-booklets .paper-lead-photo{object-position:center 20%;}
+.homepage-booklets .paper-lead-photo{height:180px;object-position:center 17%;}
