@@ -756,3 +756,9 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .magazine-cover>p{position:absolute;left:22px;bottom:80px;max-width:135px;text-align:left;font-size:23px;line-height:1.1;color:#74384d;background:#fff7eddf;padding:9px;margin:0;}
 .homepage-booklets .magazine-cover .magazine-foot{position:absolute;bottom:30px;left:24px;right:24px;font-size:10px;text-align:center;letter-spacing:1px;}
 @media(max-width:760px){.homepage-booklets .traditional-booklet{grid-column:1;grid-row:2;}.homepage-booklets .magazine-booklet{grid-column:1;grid-row:3;}}
+/* Clean newspaper corner, framed feature photo, and full-screen camera crops. */
+.homepage-booklets #newspaper-prev::after{content:none!important;}
+.homepage-booklets .paper-lead-photo{border:1px solid #111;}
+.homepage-booklets .magazine-booklet .booklet-leaf{scrollbar-width:none;}
+.homepage-booklets .magazine-booklet .booklet-leaf::-webkit-scrollbar{display:none;}
+.camera-screen img{object-fit:cover;object-position:center;}
