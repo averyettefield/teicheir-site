@@ -1,6 +1,6 @@
 # Teicheir
 
-A separate personal creator website built with HTML, CSS, and JavaScript. This project does not change the professional portfolio.
+A separate creator and UGC brand website built with HTML, CSS, and JavaScript. The design uses clean cream/blush surfaces, burgundy accents, editorial typography, content pillars, channel links, and a prominent collaboration path. This project does not change the professional portfolio.
 
 ## Preview in VS Code
 
@@ -8,7 +8,7 @@ Open `teicheir-site.code-workspace`. Run `npm start`, then visit http://127.0.0.
 
 ## Pages
 
-Home, About, Videos, Photos, Journal, Projects, and Contact are separate HTML pages. Shared styles and interactions are in `assets/`. All internal URLs are relative so the site works under a GitHub Pages repository path.
+Home, About, Videos, Photography, Journal, Projects, and Work with me are separate HTML pages. Shared styles and interactions are in `assets/`; `creator.css` defines the current brand direction on top of the shared layout styles. All internal URLs are relative so the site works under a GitHub Pages repository path.
 
 ## Content and privacy
 
