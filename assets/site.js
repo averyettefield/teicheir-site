@@ -304,14 +304,15 @@ if(aboutAvatar){
   const originalAlt=aboutAvatar.alt;
   const alternate='assets/teicheir-about-cutout.png';
   const preload=new Image();preload.src=alternate;
-  aboutAvatar.addEventListener('pointerenter',event=>{
-    if(event.pointerType!=='mouse')return;
+  aboutAvatar.addEventListener('mouseenter',()=>{
+    if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches)return;
     aboutAvatar.src=alternate;
     aboutAvatar.alt='Teicheir in a cat-patterned sweater and dark skirt';
     aboutAvatar.classList.add('alternate-outfit');
   });
-  aboutAvatar.addEventListener('pointerleave',()=>{
+  aboutAvatar.addEventListener('mouseleave',()=>{
     aboutAvatar.src=original;aboutAvatar.alt=originalAlt;
     aboutAvatar.classList.remove('alternate-outfit');
   });
 }
+
