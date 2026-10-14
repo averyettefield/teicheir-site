@@ -1,4 +1,10 @@
 /* Teicheir creator identity: clean surfaces, editorial type, content-first hierarchy. */
+.fairy-dust-layer { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:1000; }
+.fairy-dust { position:absolute; width:var(--dust-size); height:var(--dust-size); background:#bc7f70; pointer-events:none; animation:fairy-dust-fade 800ms ease-out forwards; }
+.fairy-dust-star { clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,38% 64%,0 50%,38% 36%); background:#c08c65; }
+.fairy-dust-dot { border-radius:50%; background:#b76880; }
+@keyframes fairy-dust-fade { 0% { opacity:.85; transform:translate(-50%,-50%) scale(1) rotate(0); } 100% { opacity:0; transform:translate(calc(-50% + var(--dust-x)),calc(-50% + var(--dust-y))) scale(.15) rotate(var(--dust-turn)); } }
+@media(prefers-reduced-motion:reduce), (hover:none) and (pointer:coarse) { .fairy-dust-layer {display:none;} }
 :root {
   --cream: #fff8f4;
   --paper: #fffdfb;

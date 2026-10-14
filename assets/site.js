@@ -1,4 +1,43 @@
 const nav = document.querySelector("nav");
+// Decorative cursor dust: no pointer interception, storage, or touch tracking.
+const dustMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const dustPointer = window.matchMedia("(any-pointer: fine)");
+const dustLayer = document.createElement("div");
+dustLayer.className = "fairy-dust-layer";
+dustLayer.setAttribute("aria-hidden", "true");
+document.body.append(dustLayer);
+let lastDustTime = 0;
+let lastDustPoint = null;
+function clearDust() {
+  dustLayer.replaceChildren();
+  lastDustPoint = null;
+}
+dustMotion.addEventListener("change", clearDust);
+dustPointer.addEventListener("change", clearDust);
+document.addEventListener("visibilitychange", clearDust);
+document.addEventListener("pointerleave", () => { lastDustPoint = null; });
+document.addEventListener("pointermove", (event) => {
+  if (dustMotion.matches || !dustPointer.matches || event.pointerType !== "mouse") return;
+  const now = performance.now();
+  if (now - lastDustTime < 30) return;
+  if (lastDustPoint && Math.hypot(event.clientX - lastDustPoint.x, event.clientY - lastDustPoint.y) < 5) return;
+  lastDustTime = now;
+  lastDustPoint = { x: event.clientX, y: event.clientY };
+  for (let i = 0; i < 2 && dustLayer.childElementCount < 64; i++) {
+    const dust = document.createElement("span");
+    dust.className = "fairy-dust " + (i === 0 ? "fairy-dust-star" : "fairy-dust-dot");
+    dust.style.left = `${event.clientX + (Math.random() - 0.5) * 14}px`;
+    dust.style.top = `${event.clientY + (Math.random() - 0.5) * 14}px`;
+    dust.style.setProperty("--dust-x", `${(Math.random() - 0.5) * 36}px`);
+    dust.style.setProperty("--dust-y", `${18 + Math.random() * 24}px`);
+    dust.style.setProperty("--dust-turn", `${(Math.random() - 0.5) * 120}deg`);
+    dust.style.setProperty("--dust-size", `${i === 0 ? 6 + Math.random() * 5 : 2 + Math.random() * 2}px`);
+    dustLayer.append(dust);
+    dust.addEventListener("animationend", () => dust.remove(), { once: true });
+    // Fallback cleanup when animations are disabled or interrupted.
+    setTimeout(() => dust.remove(), 900);
+  }
+}, { passive: true });
 const menu = document.querySelector(".menu");
 menu?.addEventListener("click", () => {
   const open = menu.getAttribute("aria-expanded") !== "true";
