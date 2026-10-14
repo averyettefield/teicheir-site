@@ -694,3 +694,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .hero-frame-right p{font-size:24px;line-height:1.5;}.hero-frame-links{grid-column:1 / -1;justify-content:center;margin:0;}
 @media(max-width:1000px){.creator-hero{grid-template-columns:minmax(0,1fr) minmax(0,430px) minmax(0,1fr);gap:16px;}.hero-frame-right p{font-size:20px;}}
 @media(max-width:760px){.creator-hero{grid-template-columns:1fr;gap:30px;}.hero-frame-left,.hero-frame-right{text-align:center;}.hero-frame-left h1{font-size:48px;margin-bottom:0;}.hero-frame-links{grid-row:4;}.hero-frame-right{grid-row:3;}}
+.camera-gallery{background-color:#f9dce7;background-image:radial-gradient(circle,#fff 1.7px,transparent 1.9px);background-size:14px 14px;padding:24px 16px 40px;border:1px solid #edc6d5;border-radius:20px;margin-bottom:60px;}
+.camera-screen{background-color:#f9dce7;background-image:radial-gradient(circle,#fff 1.5px,transparent 1.8px);background-size:12px 12px;}
