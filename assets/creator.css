@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 /* Teicheir creator identity: clean surfaces, editorial type, content-first hierarchy. */
 .creator-site .portrait {position:relative;width:min(360px,100%);max-width:360px;aspect-ratio:360/500;border-radius:50%;padding:0!important;display:flex;align-items:center;justify-content:center;isolation:isolate;background:#efcdd2!important;}
@@ -625,3 +626,14 @@ body.creator-site {
 .newspaper-feature-photo img{width:135px;height:140px;object-fit:contain;}
 .newspaper-feature-photo figcaption{font:italic 24px var(--serif);}
 @media(max-width:760px){.newspaper-feature-photo{grid-template-columns:110px 1fr;gap:12px;}.newspaper-feature-photo img{width:110px;height:120px;}.newspaper-feature-photo figcaption{font-size:21px;}}
+/* Soft editorial serif typography with a script signature. */
+:root{--sans:'Cormorant Garamond',Georgia,serif;}
+body{font-size:19px;line-height:1.6;}
+.creator-site h1{font-family:var(--serif);font-weight:400;letter-spacing:-1.5px;}
+.creator-site nav a{font-size:17px;}
+.creator-site .button{font-size:17px;}
+.hero-copy>p,.page-heading>p{font-size:21px;}
+.content-pillars p,.prose p{font-size:19px;}
+.channel-strip a span,.footer-note,.draft-note,.status{font-size:15px;}
+.newspaper-stories p{font-family:var(--sans);font-size:17px;}
+@media(max-width:760px){.creator-site nav a{font-size:17px;}.creator-site .button{font-size:16px;}.hero-copy>p{font-size:19px;}.camera-controls .button{font-size:14px;}}

@@ -266,12 +266,11 @@ if (newspaperSheet) {
 
 const cameraPhoto = document.querySelector('#camera-photo');
 if (cameraPhoto) {
-  const photos = [
-    { src:'assets/teicheir-home-cutout.png', alt:'Teicheir in a denim jacket, dress, and cowboy boots', caption:'Denim, a dress, and cowboy boots.' },
-    { src:'assets/teicheir-about-cutout.png', alt:'Teicheir in a cat-patterned sweater and dark skirt', caption:'A cat sweater kind of day.' }
-  ];
+  let photos = [];
+  fetch('data/photos.json').then(r=>r.json()).then(data=>{photos=data.photos||[];}).catch(()=>{document.querySelector('#camera-status').textContent='Photo archive unavailable';});
   let selected=0;
   const showPhoto = step => {
+    if(!photos.length)return;
     selected=(selected+step+photos.length)%photos.length;
     cameraPhoto.src=photos[selected].src;
     cameraPhoto.alt=photos[selected].alt;
