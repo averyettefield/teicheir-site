@@ -717,3 +717,26 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 @media(max-width:760px){.homepage-booklets{grid-template-columns:1fr;gap:50px;width:min(450px,100%);margin:auto;}.homepage-booklets .booklet-leaves{height:650px;}.homepage-booklets .newspaper-pages{min-height:850px;}.homepage-booklets .paper-masthead{font-size:29px;}.homepage-booklets .magazine-cover h2{font-size:52px;}.homepage-booklets .booklet-controls{justify-content:space-between;}.camera-gallery{padding:18px 8px 28px;}.photo-heading h1{font-size:46px;}}
 .camera-image{mix-blend-mode:normal;}
 .camera-screen{left:29.4%;top:34.3%;width:39.8%;height:38.2%;}
+/* Familiar print proportions, with page-turn controls tucked into the corners. */
+.homepage-booklets .brand-edit{aspect-ratio:2/3;height:auto;padding:18px;position:relative;}
+.homepage-booklets .newspaper-pages{height:100%;min-height:0;}
+.homepage-booklets .booklet-leaves{height:auto;aspect-ratio:2/3;}
+.homepage-booklets .magazine-booklet .booklet-leaves{aspect-ratio:3/4;}
+.homepage-booklets .interactive-booklet{position:relative;}
+.homepage-booklets .booklet-leaf{position:absolute;inset:0;height:auto;padding:24px 24px 45px;overflow:auto;}
+.homepage-booklets .magazine-cover img{height:180px;margin-top:18px;}
+.homepage-booklets .magazine-cover h2{font-size:39px;}.homepage-booklets .magazine-cover h2 em{font-size:48px;}.homepage-booklets .magazine-cover p{font-size:22px;margin:18px 0 12px;}.homepage-booklets .magazine-issue{font-size:10px;margin-bottom:16px;}
+.homepage-booklets .traditional-inside p{font-size:18px;line-height:1.5;}.homepage-booklets .traditional-inside h2{font-size:32px;margin:20px 0;}.homepage-booklets .magazine-inside h2{font-size:34px;}.homepage-booklets .magazine-inside p{font-size:18px;}.homepage-booklets .magazine-feature{padding:18px;margin:18px 0;}.homepage-booklets .magazine-feature>span{font-size:39px;}.homepage-booklets .magazine-photo{height:160px;}
+.homepage-booklets .paper-masthead{font-size:25px;padding:12px 0;}.homepage-booklets .paper-edition{font-size:10px;padding:6px 0;}.homepage-booklets .paper-kicker{font-size:10px;margin:10px 0 7px;}.homepage-booklets .paper-headline{font-size:25px;}.homepage-booklets .paper-deck{font-size:12px;margin-bottom:10px;padding-bottom:10px;}.homepage-booklets .paper-lead-photo{height:165px;}.paper-cover-note{text-align:center;font:13px/1.5 Georgia,serif;border-top:1px solid #181716;margin:12px 0 0;padding-top:10px;}
+.homepage-booklets .newspaper-feature-photo img{height:150px;}.homepage-booklets .newspaper-stories{column-count:1;}.homepage-booklets .newspaper-stories article{padding:10px 0;}.homepage-booklets .newspaper-stories h3{font-size:22px;margin-bottom:5px;}.homepage-booklets .newspaper-stories p{font-size:14px;margin-bottom:5px;}.homepage-booklets .edit-top{font-size:26px;}.homepage-booklets .edit-top::after{display:none;}.homepage-booklets .newspaper-page:nth-child(2){min-height:0;padding-bottom:40px;height:100%;overflow:auto;}
+.homepage-booklets .booklet-controls,.homepage-booklets .newspaper-controls{position:absolute;left:0;right:0;bottom:0;height:52px;padding:0;margin:0;border:0;display:block;z-index:10;pointer-events:none;}
+.homepage-booklets .booklet-status,.homepage-booklets #newspaper-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+.homepage-booklets .booklet-controls button,.homepage-booklets .newspaper-controls button{position:absolute;bottom:0;width:52px;height:52px;border:0;padding:0;margin:0;font-size:0;pointer-events:auto;border-radius:0;transition:width 180ms,height 180ms,filter 180ms;box-shadow:none;background:linear-gradient(135deg,transparent 49%,#d6a3b5 50%,#ffeef3 57%);color:#74384d;}
+.homepage-booklets .booklet-next,.homepage-booklets #newspaper-next{right:0;}
+.homepage-booklets .booklet-prev,.homepage-booklets #newspaper-prev{left:0;background:linear-gradient(225deg,transparent 49%,#d6a3b5 50%,#ffeef3 57%)!important;}
+.homepage-booklets .booklet-controls button::after,.homepage-booklets .newspaper-controls button::after{content:'→';position:absolute;right:7px;bottom:5px;font:18px Georgia,serif;}
+.homepage-booklets .booklet-prev::after,.homepage-booklets #newspaper-prev::after{content:'←'!important;left:7px;right:auto;}
+.homepage-booklets .booklet-controls button:hover:not(:disabled),.homepage-booklets .newspaper-controls button:hover:not(:disabled){width:65px;height:65px;filter:drop-shadow(-3px -3px 3px #63313c30);background:linear-gradient(135deg,transparent 49%,#d6a3b5 50%,#ffeef3 57%);}
+.homepage-booklets .booklet-controls button:disabled,.homepage-booklets .newspaper-controls button:disabled{opacity:.2;}
+@media(max-width:760px){.homepage-booklets .brand-edit{aspect-ratio:2/3;}.homepage-booklets .newspaper-pages{min-height:0;}.homepage-booklets .booklet-leaves{height:auto;}.homepage-booklets .magazine-cover h2{font-size:39px;}.homepage-booklets .magazine-cover h2 em{font-size:48px;}.homepage-booklets .paper-masthead{font-size:25px;}}
+@media(prefers-reduced-motion:reduce){.homepage-booklets .booklet-controls button,.homepage-booklets .newspaper-controls button{transition:none;}}
