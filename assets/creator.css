@@ -740,3 +740,12 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .booklet-controls button:disabled,.homepage-booklets .newspaper-controls button:disabled{opacity:.2;}
 @media(max-width:760px){.homepage-booklets .brand-edit{aspect-ratio:2/3;}.homepage-booklets .newspaper-pages{min-height:0;}.homepage-booklets .booklet-leaves{height:auto;}.homepage-booklets .magazine-cover h2{font-size:39px;}.homepage-booklets .magazine-cover h2 em{font-size:48px;}.homepage-booklets .paper-masthead{font-size:25px;}}
 @media(prefers-reduced-motion:reduce){.homepage-booklets .booklet-controls button,.homepage-booklets .newspaper-controls button{transition:none;}}
+/* Matching editions; their folded corners are revealed only on hover or focus. */
+.homepage-booklets .magazine-booklet .booklet-leaves{aspect-ratio:2/3;}
+.homepage-booklets .booklet-controls button::after,.homepage-booklets .newspaper-controls button::after{content:none!important;}
+.homepage-booklets .booklet-controls button,.homepage-booklets .newspaper-controls button{width:58px;height:58px;background:transparent!important;filter:none;}
+.homepage-booklets .booklet-controls button::before,.homepage-booklets .newspaper-controls button::before{content:'';position:absolute;inset:0;opacity:0;transform:scale(.65);transform-origin:bottom right;background:linear-gradient(135deg,transparent 49%,#d6a3b5 50%,#ffeef3 57%);transition:opacity 160ms,transform 220ms;}
+.homepage-booklets .booklet-prev::before,.homepage-booklets #newspaper-prev::before{transform-origin:bottom left;background:linear-gradient(225deg,transparent 49%,#d6a3b5 50%,#ffeef3 57%);}
+.homepage-booklets .booklet-controls button:hover:not(:disabled),.homepage-booklets .newspaper-controls button:hover:not(:disabled){width:58px;height:58px;background:transparent!important;filter:none;}
+.homepage-booklets .booklet-controls button:hover:not(:disabled)::before,.homepage-booklets .newspaper-controls button:hover:not(:disabled)::before,.homepage-booklets .booklet-controls button:focus-visible::before,.homepage-booklets .newspaper-controls button:focus-visible::before{opacity:1;transform:scale(1);filter:drop-shadow(-3px -3px 3px #63313c30);}
+@media(prefers-reduced-motion:reduce){.homepage-booklets .booklet-controls button::before,.homepage-booklets .newspaper-controls button::before{transition:none;}}
