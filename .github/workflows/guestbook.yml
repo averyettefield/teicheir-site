@@ -1,8 +1,6 @@
 name: Refresh public guestbook books
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
   schedule:
     - cron: '*/15 * * * *'
 permissions:
@@ -10,8 +8,8 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: guestbook-pages
+  cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest

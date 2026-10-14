@@ -762,3 +762,10 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .magazine-booklet .booklet-leaf{scrollbar-width:none;}
 .homepage-booklets .magazine-booklet .booklet-leaf::-webkit-scrollbar{display:none;}
 .camera-screen img{object-fit:cover;object-position:center;}
+.photo-heading{width:min(800px,100%);margin-inline:auto;display:grid;grid-template-columns:14% minmax(0,1fr);}
+.photo-heading>*{grid-column:2;}.photo-heading h1{font-size:clamp(36px,5vw,64px);}.photo-heading p{max-width:100%;}
+.homepage-booklets .newspaper-cover-front,.homepage-booklets .newspaper-cover-back,.homepage-booklets .newspaper-page:nth-child(2){scrollbar-width:none;}
+.homepage-booklets .newspaper-cover-front::-webkit-scrollbar,.homepage-booklets .newspaper-cover-back::-webkit-scrollbar,.homepage-booklets .newspaper-page:nth-child(2)::-webkit-scrollbar{display:none;}
+.homepage-booklets .newspaper-controls button:disabled{visibility:hidden;pointer-events:none;}
+.homepage-booklets #newspaper-next::before{background:linear-gradient(135deg,transparent 49%,#b9b6b0 50%,#f3f1ed 57%);}
+.homepage-booklets #newspaper-prev::before{background:linear-gradient(225deg,transparent 49%,#b9b6b0 50%,#f3f1ed 57%);}

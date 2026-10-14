@@ -16,7 +16,7 @@ for message in soup.select("#messages .message"):
     header = message.select_one(".split")
     author = "Guest"
     if header:
-        name = header.find("div", recursive=False)
+        name = header.find("strong") or header.find("div", recursive=False)
         if name:
             for stamp in name.select(".message-time, .message-num"):
                 stamp.decompose()
