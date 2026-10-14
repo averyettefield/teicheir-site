@@ -682,3 +682,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 /* Center the visible figure, compensating only for its transparent canvas margins. */
 .creator-site .about-orbit .portrait img{transform:translate(9%,.5%);}
 
+/* Alternate outfit has a different transparent margin; keep both figures centered. */
+.creator-site .about-orbit .portrait img.alternate-outfit{transform:translateX(-16%);}

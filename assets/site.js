@@ -296,3 +296,22 @@ if(guestShelf){
     });
   }).catch(()=>{document.querySelector('#guest-books-status').textContent='The book shelf is temporarily unavailable. You can still read and sign on Atabook below.';});
 }
+
+// Swap outfits only while a mouse pointer is over the avatar image.
+const aboutAvatar=document.querySelector('.avatar-hover img');
+if(aboutAvatar){
+  const original=aboutAvatar.getAttribute('src');
+  const originalAlt=aboutAvatar.alt;
+  const alternate='assets/teicheir-about-cutout.png';
+  const preload=new Image();preload.src=alternate;
+  aboutAvatar.addEventListener('pointerenter',event=>{
+    if(event.pointerType!=='mouse')return;
+    aboutAvatar.src=alternate;
+    aboutAvatar.alt='Teicheir in a cat-patterned sweater and dark skirt';
+    aboutAvatar.classList.add('alternate-outfit');
+  });
+  aboutAvatar.addEventListener('pointerleave',()=>{
+    aboutAvatar.src=original;aboutAvatar.alt=originalAlt;
+    aboutAvatar.classList.remove('alternate-outfit');
+  });
+}
