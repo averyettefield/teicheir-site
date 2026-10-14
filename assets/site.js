@@ -283,17 +283,22 @@ const guestShelf=document.querySelector('#guest-book-shelf');
 if(guestShelf){
   fetch('https://averyettefield.github.io/teicheir-site/data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
     const entries=Array.isArray(data.entries)?data.entries:[];
-    document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Open a cover to read.`:'No guest entries yet. Leave the first hello below.';
+    document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Turn a corner to read.`:'No guest entries yet. Leave the first hello below.';
     entries.forEach((entry,index)=>{
-      const book=document.createElement('details');book.className='guest-entry-book';
-      const cover=document.createElement('summary');
+      const book=document.createElement('article');book.className='guest-entry-book guest-flip-book';book.setAttribute('aria-label','Guest book from '+(entry.name||'Guest'));
+      const cover=document.createElement('div');cover.className='guest-book-cover';
       const number=document.createElement('span');number.className='guest-book-number';number.textContent=`GUEST BOOK ${String(index+1).padStart(2,'0')}`;
       const name=document.createElement('span');name.className='guest-book-name';name.textContent=entry.name||'Guest';
-      const hint=document.createElement('span');hint.className='guest-book-hint';hint.textContent='Open this book →';
+      const hint=document.createElement('span');hint.className='guest-book-hint';hint.textContent='Turn the corner to read';
       cover.append(number,name,hint);
       const pages=document.createElement('div');pages.className='guest-book-message';
-      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);const closeBook=document.createElement('button');closeBook.type='button';closeBook.className='guest-book-close';closeBook.textContent='Close book';closeBook.addEventListener('click',()=>{book.open=false;cover.focus();});pages.append(closeBook);
-      book.append(cover,pages);guestShelf.append(book);
+      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);pages.hidden=true;
+      const controls=document.createElement('div');controls.className='guest-page-controls';
+      const back=document.createElement('button');back.type='button';back.className='guest-page-prev';back.setAttribute('aria-label','Return to cover of '+(entry.name||'Guest')+"'s book");back.disabled=true;
+      const forward=document.createElement('button');forward.type='button';forward.className='guest-page-next';forward.setAttribute('aria-label','Read entry from '+(entry.name||'Guest'));
+      const turn=open=>{cover.hidden=open;pages.hidden=!open;back.disabled=!open;forward.disabled=open;book.classList.toggle('guest-book-open',open);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(open?pages:cover).animate([{opacity:0,transform:'perspective(700px) rotateY('+(open?'-25':'25')+'deg)'},{opacity:1,transform:'rotateY(0deg)'}],{duration:450,easing:'ease-out'});(open?back:forward).focus();};
+      forward.addEventListener('click',()=>turn(true));back.addEventListener('click',()=>turn(false));controls.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();turn(event.key==='ArrowRight');}});
+      controls.append(back,forward);book.append(cover,pages,controls);guestShelf.append(book);
     });
   }).catch(()=>{document.querySelector('#guest-books-status').textContent='';});
 }
