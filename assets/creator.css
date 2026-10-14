@@ -820,3 +820,4 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .booklet-controls button:disabled{visibility:hidden;pointer-events:none;}
 .homepage-booklets .magazine-image-cover{padding:0;background:#fff;overflow:hidden;}
 .homepage-booklets .magazine-image-cover img.magazine-cover-art{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;border:0;object-fit:contain;transform:none;}
+.homepage-booklets .magazine-image-cover img.magazine-cover-art{object-fit:fill;}
