@@ -264,24 +264,6 @@ if (newspaperSheet) {
   matchSheetSize();
 }
 
-const cameraPhoto = document.querySelector('#camera-photo');
-if (cameraPhoto) {
-  let photos = [];
-  fetch('data/photos.json').then(r=>r.json()).then(data=>{photos=data.photos||[];}).catch(()=>{document.querySelector('#camera-status').textContent='Photo archive unavailable';});
-  let selected=0;
-  const showPhoto = step => {
-    if(!photos.length)return;
-    selected=(selected+step+photos.length)%photos.length;
-    cameraPhoto.src=photos[selected].src;
-    cameraPhoto.alt=photos[selected].alt;
-    document.querySelector('#camera-caption').textContent=photos[selected].caption;
-    document.querySelector('#camera-status').textContent=`Photo ${selected+1} of ${photos.length}`;
-  };
-  document.querySelector('#camera-prev').addEventListener('click',()=>showPhoto(-1));
-  document.querySelector('#camera-next').addEventListener('click',()=>showPhoto(1));
-
-}
-
 const journalSheets=[...document.querySelectorAll('.journal-sheet')];
 if(journalSheets.length){
   const open=document.querySelector('#journal-open'),close=document.querySelector('#journal-close');
