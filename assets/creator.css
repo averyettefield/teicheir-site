@@ -963,3 +963,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .paper-headline{text-align:center;}
 
 .creator-site nav a[aria-current="page"]::after{height:3px;bottom:-2px;}.homepage-booklets .paper-dateline>span:first-child{max-width:45%;line-height:1.2;}
+
+.creator-site nav a[aria-current="page"]::after{content:'\2665';background:transparent;clip-path:none;height:10px;bottom:-5px;color:#111;font:10px/10px Georgia,serif;text-align:center;}
