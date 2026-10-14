@@ -11,8 +11,8 @@
     <title>Journal — Teicheir</title>
     <link rel="icon" href="assets/rose-gold-t-logo.png" />
     <link rel="stylesheet" href="assets/site.css" />
-    <link rel="stylesheet" href="assets/creator.css?v=media-journal-6" />
-    <script src="assets/site.js?v=media-journal-6" defer></script>
+    <link rel="stylesheet" href="assets/creator.css?v=entry-books-7" />
+    <script src="assets/site.js?v=entry-books-7" defer></script>
   </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -44,14 +44,10 @@
       </div>
     </header>
     <main id="main" class="wrap">
-      <div class="page-heading"><h1>Leave a little note.</h1><p>A journal for everyone who stops by. Open it, sign it, and make yourself at home.</p></div>
-      <section class="guest-journal" aria-label="Teicheir guestbook journal">
-        <div class="journal-inner" id="guestbook-pages">
-          <section class="journal-sheet journal-cover" aria-label="Journal cover"><span class="journal-cover-title">Teicheir</span><h2>The guest journal</h2><span aria-hidden="true">♡</span><p>A little hello goes a long way.</p></section>
-          <section class="journal-sheet journal-signing" aria-label="Sign the guest journal" hidden><h2>Make your mark.</h2><iframe src="https://teicheir.atabook.org/" title="Teicheir public guestbook: read messages and sign" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><a href="https://teicheir.atabook.org/" target="_blank" rel="noopener noreferrer">Open the guestbook in a new tab ↗</a></section>
-        </div>
-        <div class="journal-controls"><button class="button secondary" type="button" id="journal-close" disabled aria-controls="guestbook-pages">← Cover</button><span id="journal-page-status" role="status">Cover</span><button class="button" type="button" id="journal-open" aria-controls="guestbook-pages">Open journal →</button></div>
-      </section>
+      <div class="page-heading"><h1>A shelf of little hellos.</h1><p>Every guest entry has its own book. Select a cover to open the message inside.</p></div>
+      <section id="guest-book-shelf" class="guest-book-shelf" aria-label="Guest entry books"></section>
+      <p id="guest-books-status" class="status" role="status">Loading guest entries…</p>
+      <section class="guest-signing"><h2>Leave your own hello.</h2><p>Your public message becomes a book after the guestbook sync runs. No account needed.</p><details><summary>Sign the guestbook</summary><iframe src="https://teicheir.atabook.org/" title="Sign Teicheir’s public guestbook" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></details><p><a href="https://teicheir.atabook.org/" target="_blank" rel="noopener noreferrer">Read and sign directly on Atabook ↗</a></p></section>
     </main>
     <footer>
       <div class="wrap">

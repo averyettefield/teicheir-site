@@ -280,7 +280,7 @@ if (cameraPhoto) {
   };
   document.querySelector('#camera-prev').addEventListener('click',()=>showPhoto(-1));
   document.querySelector('#camera-next').addEventListener('click',()=>showPhoto(1));
-  document.querySelector('.camera-next-hotspot').addEventListener('click',()=>showPhoto(1));
+
 }
 
 const journalSheets=[...document.querySelectorAll('.journal-sheet')];
@@ -295,4 +295,23 @@ if(journalSheets.length){
     (inside?close:open).focus();
   };
   open.addEventListener('click',()=>showJournal(true));close.addEventListener('click',()=>showJournal(false));
+}
+
+const guestShelf=document.querySelector('#guest-book-shelf');
+if(guestShelf){
+  fetch('data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
+    const entries=Array.isArray(data.entries)?data.entries:[];
+    document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Open a cover to read.`:'No guest entries yet. Leave the first hello below.';
+    entries.forEach((entry,index)=>{
+      const book=document.createElement('details');book.className='guest-entry-book';
+      const cover=document.createElement('summary');
+      const number=document.createElement('span');number.className='guest-book-number';number.textContent=`GUEST BOOK ${String(index+1).padStart(2,'0')}`;
+      const name=document.createElement('span');name.className='guest-book-name';name.textContent=entry.name||'Guest';
+      const hint=document.createElement('span');hint.className='guest-book-hint';hint.textContent='Open this book →';
+      cover.append(number,name,hint);
+      const pages=document.createElement('div');pages.className='guest-book-message';
+      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);
+      book.append(cover,pages);guestShelf.append(book);
+    });
+  }).catch(()=>{document.querySelector('#guest-books-status').textContent='The book shelf is temporarily unavailable. You can still read and sign on Atabook below.';});
 }
