@@ -803,3 +803,8 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .creator-site .heart-brief{background:transparent url('cherry-lace-heart.svg') center top/100% 100% no-repeat;border:0;box-shadow:none;padding:0;aspect-ratio:600/650;min-height:580px;display:flex;align-items:flex-start;justify-content:center;}
 .heart-brief-content{width:60%;max-width:300px;padding-top:100px;text-align:center;}.creator-site .heart-brief h2{font-size:32px;line-height:1.08;margin-bottom:16px;}.heart-brief .brief-list{text-align:left;font-size:15px;line-height:1.35;padding-left:18px;margin-bottom:12px;}.heart-brief .brief-list li{margin-bottom:7px;}.heart-brief .draft-note{font-size:12px;line-height:1.35;margin-bottom:12px;}.heart-brief .text-link{font-size:13px;}
 @media(max-width:760px){.creator-site .heart-brief{width:min(500px,100%);min-height:560px;justify-self:center;}.heart-brief-content{width:60%;padding-top:105px;}.creator-site .heart-brief h2{font-size:29px;}.heart-brief .brief-list{font-size:13px;}}
+/* Cream paper curls, vertically arranged portraits, and a closer signing area. */
+.homepage-booklets .newspaper-controls #newspaper-next::before{background:linear-gradient(135deg,transparent 49%,#e5e2da 50%,#fffdf6 57%)!important;}
+.homepage-booklets .newspaper-controls #newspaper-prev::before{background:linear-gradient(225deg,transparent 49%,#e5e2da 50%,#fffdf6 57%)!important;}
+.interview-portraits{grid-template-columns:1fr;}.interview-portraits img{height:155px;}.interview-bottom{margin-top:10px;}
+.guest-book-shelf{padding-bottom:8px;}.guest-signing{padding-top:8px;padding-bottom:35px;}.guest-signing h2{margin-top:0;}.guest-signing>p:first-of-type{margin-bottom:12px;}
