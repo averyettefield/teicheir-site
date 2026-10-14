@@ -959,3 +959,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .creator-site nav a[aria-current="page"]{position:relative;border-bottom-color:transparent;}
 .creator-site nav a[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:8px;background:#171717;clip-path:polygon(0 0,100% 0,94% 50%,100% 100%,0 100%,6% 50%);pointer-events:none;}
 @media(prefers-reduced-motion:reduce){.portfolio-projects .project-card{transition:none;}.portfolio-projects .project-card:hover,.portfolio-projects .project-card:focus-within{transform:none;}}
+
+.homepage-booklets .paper-headline{text-align:center;}
