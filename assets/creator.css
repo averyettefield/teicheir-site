@@ -680,4 +680,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 @media(max-width:1000px){.about-orbit{grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;}.about-copy h2{font-size:30px;}.about-copy p{font-size:18px;}}
 @media(max-width:760px){.about-orbit{grid-template-columns:1fr;gap:35px;padding-bottom:60px;}.about-orbit .portrait{grid-row:1;width:min(330px,90%);}.about-left,.about-right{text-align:center;}.about-orbit .actions{justify-content:center;}.about-copy h2{font-size:36px;}}
 /* Center the visible figure, compensating only for its transparent canvas margins. */
-.creator-site .about-orbit .portrait img{transform:translate(-.7%,.5%);}
+.creator-site .about-orbit .portrait img{transform:translate(9%,.5%);}
+
