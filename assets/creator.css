@@ -948,3 +948,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .portfolio-projects .project-body>a{display:inline-block;padding:7px 10px;background:#ffd6dc;border:1px solid #17152c;font:bold 11px 'Courier New',monospace;letter-spacing:1px;color:#8e526b;text-decoration:none;}
 
 .homepage-booklets .magazine-image-page{padding:0;background:#000;overflow:hidden;}.homepage-booklets .magazine-image-page img.magazine-page-art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;border:0;margin:0;}
+
+.guest-book-shelf{grid-template-columns:repeat(auto-fill,minmax(170px,220px));gap:24px;}.guest-entry-book summary{min-height:185px;padding:20px 18px;border-left-width:10px;}.guest-book-name{font-size:30px;}.guest-entry-book[open] summary{display:none;}.guest-book-message{min-height:185px;padding:18px;border-left-width:10px;}.guest-book-message p{font-size:14px;line-height:27px;}.guest-book-close{display:block;margin-top:18px;padding:5px 8px;border:1px solid #a66a77;background:#fff8ed;color:#74384d;font:13px Georgia,serif;}

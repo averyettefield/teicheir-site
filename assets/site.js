@@ -292,7 +292,7 @@ if(guestShelf){
       const hint=document.createElement('span');hint.className='guest-book-hint';hint.textContent='Open this book →';
       cover.append(number,name,hint);
       const pages=document.createElement('div');pages.className='guest-book-message';
-      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);
+      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);const closeBook=document.createElement('button');closeBook.type='button';closeBook.className='guest-book-close';closeBook.textContent='Close book';closeBook.addEventListener('click',()=>{book.open=false;cover.focus();});pages.append(closeBook);
       book.append(cover,pages);guestShelf.append(book);
     });
   }).catch(()=>{document.querySelector('#guest-books-status').textContent='';});
