@@ -12,7 +12,7 @@ Home, About, Videos, Photography, Journal, Projects, and Work with me are separa
 
 ## Content and privacy
 
-The current rose-gold T logo was supplied by the user and copied without modification. The mascot uses a transparent PNG cutout made with the built-in image editing tool from the supplied mascot; the original JPEG remains in assets. No invented photos, video titles, published journal entries, audience statistics, email addresses, or biography details are included.
+The current rose-gold T logo was supplied by the user and copied without modification. The homepage uses the supplied denim-jacket outfit photo and About uses the supplied cat-sweater outfit photo, with checkerboard backgrounds removed by the built-in image editing tool. Original files and the earlier mascot remain in assets. No invented photos, video titles, published journal entries, audience statistics, email addresses, or biography details are included.
 
 The photo preview uses temporary browser object URLs; images are not uploaded and vanish when the tab reloads. Journal drafts and saved-project preferences use localStorage on the current browser origin. A downloaded journal draft is not published. Contact links to the supplied Instagram profile rather than using a nonfunctional form. Social links were supplied by the user; automated live-profile verification was blocked by the platforms.
 
