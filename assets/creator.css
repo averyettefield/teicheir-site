@@ -961,3 +961,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 @media(prefers-reduced-motion:reduce){.portfolio-projects .project-card{transition:none;}.portfolio-projects .project-card:hover,.portfolio-projects .project-card:focus-within{transform:none;}}
 
 .homepage-booklets .paper-headline{text-align:center;}
+
+.creator-site nav a[aria-current="page"]::after{height:3px;bottom:-2px;}.homepage-booklets .paper-dateline>span:first-child{max-width:45%;line-height:1.2;}
