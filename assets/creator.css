@@ -34,6 +34,13 @@ body.creator-site {
 .creator-site .brand {
   font-size: 32px;
 }
+.creator-site .brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 0;
+  mix-blend-mode: normal;
+}
 .creator-site .brand .bow {
   display: none;
 }
@@ -123,9 +130,9 @@ body.creator-site {
 .edit-bottom img {
   width: 70px;
   height: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-  mix-blend-mode: multiply;
+  object-fit: contain;
+  border-radius: 0;
+  mix-blend-mode: normal;
 }
 .edit-bottom > span {
   font-size: 12px;
@@ -294,6 +301,9 @@ body.creator-site {
 }
 .creator-site .portrait figcaption {
   font: 13px var(--sans);
+}
+.creator-site .portrait img {
+  mix-blend-mode: normal;
 }
 .creator-site .launch {
   border: 0;
