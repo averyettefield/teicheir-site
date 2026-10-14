@@ -94,7 +94,7 @@ document.querySelector(".charm")?.addEventListener("click", () => {
   const note = document.querySelector("#charm-note");
   note.textContent = note.textContent
     ? ""
-    : "Thanks for stopping by. Stay a little while ♡";
+    : "Thanks for stopping by. Stay a little while!";
   document.querySelector(".charm").setAttribute("aria-expanded",String(Boolean(note.textContent)));
 });
 const draft = document.querySelector("#draft-form");
