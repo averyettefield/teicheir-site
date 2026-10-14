@@ -50,15 +50,6 @@ body.creator-site {
 .creator-site nav a {
   font-size: 13px;
 }
-.creator-site nav .nav-cta {
-  padding: 11px 18px;
-  background: var(--rose);
-  color: var(--paper);
-  border-bottom: 0;
-}
-.creator-site nav .nav-cta:hover {
-  background: var(--ink);
-}
 .creator-site .button {
   border-radius: 0;
   font-size: 14px;
