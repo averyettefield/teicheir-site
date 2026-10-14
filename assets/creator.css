@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 /* Teicheir creator identity: clean surfaces, editorial type, content-first hierarchy. */
 .creator-site .portrait {position:relative;width:min(360px,100%);max-width:360px;aspect-ratio:360/500;border-radius:50%;padding:0!important;display:flex;align-items:center;justify-content:center;isolation:isolate;background:#efcdd2!important;}
 .creator-site .portrait::after {content:"";position:absolute;inset:-4px;background:url("lace-oval.svg") center/100% 100% no-repeat;pointer-events:none;z-index:1;}
@@ -525,3 +526,32 @@ body.creator-site {
 .edit-bottom .edit-signature { font-size:26px; }
 @media(max-width:760px) { .edit-top {font-size:35px;} .edit-lines>span {font-size:16px;} .edit-bottom {grid-template-columns:110px minmax(0,1fr);} .edit-bottom img{width:110px;height:160px;} .edit-bottom>span{font-size:19px;} }
 .edit-top > span:last-child {font:inherit;line-height:inherit;}
+.newspaper-pages { min-height:370px; }
+.newspaper-page { transform-origin:left center; }
+.newspaper-controls { display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #8b756a;margin-top:20px;padding-top:15px;font-size:11px; }
+.newspaper-controls button { padding:9px 10px;border:1px solid #8b756a;background:transparent;color:#382b28;font-size:12px; }
+.newspaper-controls button:hover:not(:disabled) { background:#eadbc8; }
+.newspaper-controls button:disabled { opacity:.4; }
+.newspaper-stories article { border-bottom:1px solid #b6a294;padding:16px 0; }
+.newspaper-stories h3 { font-size:27px;margin-bottom:10px; }
+.newspaper-stories p { font:14px/1.5 Georgia,serif;margin-bottom:10px; }
+.newspaper-stories a { font-size:12px; }
+@media(max-width:760px){.newspaper-pages{min-height:360px;}}
+/* The newspaper opens into a spread over the hero copy. */
+.brand-edit { position:relative; perspective:1600px; }
+.newspaper-pages { position:relative;min-height:430px; }
+.newspaper-page:first-child {position:absolute;inset:0;background:#f8f0e3;z-index:3;transform-style:preserve-3d;transform-origin:left center;transition:transform 750ms cubic-bezier(.2,.65,.25,1);}
+.newspaper-cover-front,.newspaper-cover-back {position:absolute;inset:0;background:#f8f0e3;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:0;}
+.newspaper-cover-back {transform:rotateY(180deg);border:1px solid #b6a294;padding:24px;box-shadow:-8px 8px 20px #382b2820;}
+.newspaper-cover-back h3{font-size:33px;margin-top:22px;}
+.newspaper-cover-back p{font:15px/1.5 Georgia,serif;}
+.newspaper-cover-back img{height:180px;width:100%;object-fit:contain;}
+.newspaper-open {z-index:5;}
+.newspaper-open .newspaper-page:first-child {transform:rotateY(-180deg);}
+.newspaper-open .newspaper-page:nth-child(2){min-height:430px;}
+@media(max-width:760px){.newspaper-open .newspaper-page:first-child{transform:rotateY(-180deg);opacity:0;pointer-events:none;transition:transform 750ms,opacity 150ms 600ms;}.newspaper-cover-back{display:none;}}
+@media(prefers-reduced-motion:reduce){.newspaper-page:first-child{transition:none;}}
+
+
+.creator-site .brand {font-family:Parisienne, cursive;font-size:40px;} .edit-signature {font-family:Parisienne,cursive!important;}@media(min-width:761px){.brand-edit{transition:transform 750ms cubic-bezier(.2,.65,.25,1);}.newspaper-page:first-child{transform-origin:right center;}.newspaper-open{transform:translateX(calc(-100% - 60px));}.newspaper-open .newspaper-page:first-child{transform:rotateY(180deg);}}
+@media(prefers-reduced-motion:reduce){.brand-edit{transition:none;}}

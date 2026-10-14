@@ -11,8 +11,8 @@
     <title>Teicheir — Creator & UGC</title>
     <link rel="icon" href="assets/rose-gold-t-logo.png" />
     <link rel="stylesheet" href="assets/site.css" />
-    <link rel="stylesheet" href="assets/creator.css?v=lace-news-1" />
-    <script src="assets/site.js?v=fairy-1" defer></script>
+    <link rel="stylesheet" href="assets/creator.css?v=newspaper-flip-2" />
+    <script src="assets/site.js?v=newspaper-flip-2" defer></script>
   </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -64,6 +64,9 @@
           class="brand-edit"
           aria-label="The Teicheir edit: gaming, lifestyle, creative"
         >
+          <div class="newspaper-pages" id="newspaper-pages">
+          <section class="newspaper-page" aria-label="Front page">
+          <div class="newspaper-cover-front">
           <div class="edit-top">
             <span>The Teicheir Edit</span>
           </div>
@@ -88,6 +91,23 @@
               height="1448"
             /><span>A little playful.<br />A lot of personality.</span
             ><span class="edit-signature" aria-hidden="true">Teicheir</span>
+          </div>
+          </div>
+          <div class="newspaper-cover-back" aria-hidden="true"><div class="edit-top"><span>Behind the Content</span></div><h3>One creator.<br>Different sides.</h3><p>Gaming, lifestyle, and creative stories through the Teicheir lens.</p><img src="assets/teicheir-home-cutout.png" alt="" width="1086" height="1448"></div>
+          </section>
+          <section class="newspaper-page" aria-label="Inside the edit" hidden>
+            <div class="edit-top"><span>Inside the Edit</span></div>
+            <div class="newspaper-stories">
+              <article><h3>Press play.</h3><p>Gaming, vlogs, and short videos — find the latest on my channels.</p><a href="videos.html">Explore videos →</a></article>
+              <article><h3>Through my lens.</h3><p>Photography and everyday details from the Teicheir perspective.</p><a href="photos.html">See photography →</a></article>
+              <article><h3>A new idea starts here.</h3><p>Creative projects and a place to connect.</p><a href="projects.html">Explore projects →</a> · <a href="contact.html">Connect →</a></article>
+            </div>
+          </section>
+          </div>
+          <div class="newspaper-controls" aria-label="Newspaper page controls">
+            <button type="button" id="newspaper-prev" aria-controls="newspaper-pages" disabled>← Previous</button>
+            <span id="newspaper-status" role="status" aria-live="polite">Page 1 of 2</span>
+            <button type="button" id="newspaper-next" aria-controls="newspaper-pages">Next →</button>
           </div>
         </div>
       </section>
