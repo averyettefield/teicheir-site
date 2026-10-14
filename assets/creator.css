@@ -684,3 +684,8 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 /* Alternate outfit has a different transparent margin; keep both figures centered. */
 .creator-site .about-orbit .portrait img.alternate-outfit{transform:translateX(-16%);}
+.video-stage{display:grid;grid-template-columns:minmax(0,1fr) 330px minmax(0,1fr);align-items:center;gap:36px;padding:0 0 80px;}
+.video-accent h2{font-size:46px;}.video-accent p{font-size:21px;line-height:1.6;max-width:290px;}.video-accent-left{text-align:right;}.video-accent-left p{margin-left:auto;}.video-accent-right{text-align:left;}
+.video-channel-links{grid-column:1 / -1;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+.photo-heading{text-align:center;}.photo-heading p{margin-left:auto;margin-right:auto;}
+@media(max-width:760px){.video-stage{grid-template-columns:1fr;gap:28px;}.video-accent-left,.video-accent-right{text-align:center;}.video-accent p{margin-left:auto;margin-right:auto;}.video-accent h2{font-size:38px;}.video-stage .creator-phone{grid-row:2;}.video-channel-links{grid-row:3;}.video-accent-right{grid-row:4;}}
