@@ -749,3 +749,10 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .booklet-controls button:hover:not(:disabled),.homepage-booklets .newspaper-controls button:hover:not(:disabled){width:58px;height:58px;background:transparent!important;filter:none;}
 .homepage-booklets .booklet-controls button:hover:not(:disabled)::before,.homepage-booklets .newspaper-controls button:hover:not(:disabled)::before,.homepage-booklets .booklet-controls button:focus-visible::before,.homepage-booklets .newspaper-controls button:focus-visible::before{opacity:1;transform:scale(1);filter:drop-shadow(-3px -3px 3px #63313c30);}
 @media(prefers-reduced-motion:reduce){.homepage-booklets .booklet-controls button::before,.homepage-booklets .newspaper-controls button::before{transition:none;}}
+.homepage-booklets .traditional-booklet{grid-column:2;grid-row:1;}.homepage-booklets .magazine-booklet{grid-column:3;grid-row:1;}
+.homepage-booklets .magazine-cover{background:#fff7ed;isolation:isolate;padding-bottom:45px;}
+.homepage-booklets .magazine-cover h2{position:relative;z-index:2;font-size:44px;text-align:center;}.homepage-booklets .magazine-cover h2 em{font-size:57px;}
+.homepage-booklets .magazine-cover img.magazine-cover-avatar{position:absolute;left:0;top:110px;width:100%;height:calc(100% - 150px);object-fit:contain;border:0;margin:0;transform:translateX(9%);z-index:-1;}
+.homepage-booklets .magazine-cover>p{position:absolute;left:22px;bottom:80px;max-width:135px;text-align:left;font-size:23px;line-height:1.1;color:#74384d;background:#fff7eddf;padding:9px;margin:0;}
+.homepage-booklets .magazine-cover .magazine-foot{position:absolute;bottom:30px;left:24px;right:24px;font-size:10px;text-align:center;letter-spacing:1px;}
+@media(max-width:760px){.homepage-booklets .traditional-booklet{grid-column:1;grid-row:2;}.homepage-booklets .magazine-booklet{grid-column:1;grid-row:3;}}
