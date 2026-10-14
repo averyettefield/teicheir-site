@@ -783,3 +783,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 @media(max-width:760px){.homepage-booklets{padding-top:35px;}.homepage-booklets .traditional-cover h2{font-size:40px;}.homepage-booklets .magazine-cover h2{font-size:48px;}.homepage-booklets .magazine-cover h2 em{font-size:60px;}.about-intro p{font-size:23px;}.video-accent-right{grid-column:1;grid-row:3;}.photo-heading{margin-bottom:0;}.camera-controls{margin-top:0!important;}.camera-controls,#camera-caption,.camera-gallery>a{left:0;}.contact-banner{padding:35px 28px;}.creator-site #charm-note:not(:empty){right:115px;max-width:220px;}}
 .camera-controls{width:87%;margin-inline:auto;margin-top:-140px!important;}#camera-caption{width:87%;margin-inline:auto;}
 @media(max-width:760px){.camera-controls{width:100%;margin-top:0!important;}#camera-caption{width:100%;}.creator-site #charm-note:not(:empty){max-width:min(220px,calc(100vw - 145px));}}
+.photo-heading{margin-bottom:0;}.camera-body{margin-top:-80px;}.camera-gallery{overflow:hidden;}
+@media(max-width:760px){.camera-body{margin-top:-20px;}}
