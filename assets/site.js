@@ -95,6 +95,7 @@ document.querySelector(".charm")?.addEventListener("click", () => {
   note.textContent = note.textContent
     ? ""
     : "Thanks for stopping by. Stay a little while ♡";
+  document.querySelector(".charm").setAttribute("aria-expanded",String(Boolean(note.textContent)));
 });
 const draft = document.querySelector("#draft-form");
 if (draft) {
@@ -294,7 +295,7 @@ if(guestShelf){
       const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);
       book.append(cover,pages);guestShelf.append(book);
     });
-  }).catch(()=>{document.querySelector('#guest-books-status').textContent='The book shelf is temporarily unavailable. You can still read and sign on Atabook below.';});
+  }).catch(()=>{document.querySelector('#guest-books-status').textContent='';});
 }
 
 // Swap outfits only while a mouse pointer is over the avatar image.
