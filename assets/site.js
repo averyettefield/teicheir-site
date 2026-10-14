@@ -250,3 +250,49 @@ if (newspaperPages.length) {
     }
   });
 }
+
+const newspaperSheet = document.querySelector('.brand-edit');
+if (newspaperSheet) {
+  const matchSheetSize = () => {
+    const styles = getComputedStyle(newspaperSheet);
+    newspaperSheet.style.setProperty('--sheet-width', `${newspaperSheet.offsetWidth}px`);
+    newspaperSheet.style.setProperty('--sheet-height', `${newspaperSheet.offsetHeight}px`);
+    newspaperSheet.style.setProperty('--sheet-padding-x', styles.paddingLeft);
+    newspaperSheet.style.setProperty('--sheet-padding-y', styles.paddingTop);
+  };
+  new ResizeObserver(matchSheetSize).observe(newspaperSheet);
+  matchSheetSize();
+}
+
+const cameraPhoto = document.querySelector('#camera-photo');
+if (cameraPhoto) {
+  const photos = [
+    { src:'assets/teicheir-home-cutout.png', alt:'Teicheir in a denim jacket, dress, and cowboy boots', caption:'Denim, a dress, and cowboy boots.' },
+    { src:'assets/teicheir-about-cutout.png', alt:'Teicheir in a cat-patterned sweater and dark skirt', caption:'A cat sweater kind of day.' }
+  ];
+  let selected=0;
+  const showPhoto = step => {
+    selected=(selected+step+photos.length)%photos.length;
+    cameraPhoto.src=photos[selected].src;
+    cameraPhoto.alt=photos[selected].alt;
+    document.querySelector('#camera-caption').textContent=photos[selected].caption;
+    document.querySelector('#camera-status').textContent=`Photo ${selected+1} of ${photos.length}`;
+  };
+  document.querySelector('#camera-prev').addEventListener('click',()=>showPhoto(-1));
+  document.querySelector('#camera-next').addEventListener('click',()=>showPhoto(1));
+  document.querySelector('.camera-next-hotspot').addEventListener('click',()=>showPhoto(1));
+}
+
+const journalSheets=[...document.querySelectorAll('.journal-sheet')];
+if(journalSheets.length){
+  const open=document.querySelector('#journal-open'),close=document.querySelector('#journal-close');
+  const showJournal=inside=>{
+    journalSheets[0].hidden=inside;journalSheets[1].hidden=!inside;
+    open.disabled=inside;close.disabled=!inside;
+    document.querySelector('#journal-page-status').textContent=inside?'Guestbook':'Cover';
+    const page=journalSheets[inside?1:0];
+    if(!dustMotion.matches)page.animate([{transform:'rotateY(-65deg)',opacity:0},{transform:'rotateY(0)',opacity:1}],{duration:550,easing:'ease-out'});
+    (inside?close:open).focus();
+  };
+  open.addEventListener('click',()=>showJournal(true));close.addEventListener('click',()=>showJournal(false));
+}

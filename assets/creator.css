@@ -555,3 +555,39 @@ body.creator-site {
 
 .creator-site .brand {font-family:Parisienne, cursive;font-size:40px;} .edit-signature {font-family:Parisienne,cursive!important;}@media(min-width:761px){.brand-edit{transition:transform 750ms cubic-bezier(.2,.65,.25,1);}.newspaper-page:first-child{transform-origin:right center;}.newspaper-open{transform:translateX(calc(-100% - 60px));}.newspaper-open .newspaper-page:first-child{transform:rotateY(180deg);}}
 @media(prefers-reduced-motion:reduce){.brand-edit{transition:none;}}
+/* Both sheets use the same outer dimensions, including page margins. */
+.newspaper-page:first-child {left:calc(-1 * var(--sheet-padding-x,32px));top:calc(-1 * var(--sheet-padding-y,28px));right:auto;bottom:auto;width:var(--sheet-width,100%);height:var(--sheet-height,100%);}
+.newspaper-cover-front,.newspaper-cover-back {padding:var(--sheet-padding-y,28px) var(--sheet-padding-x,32px);}
+.newspaper-controls {position:relative;z-index:4;}
+.creator-phone {width:min(330px,100%);margin:0 auto;text-align:center;}
+.phone-shell {position:relative;border:8px solid #68434d;border-radius:42px;background:#191115;padding:36px 10px 15px;box-shadow:0 14px 30px #3b161e20,0 0 0 3px #e4aab6;overflow:hidden;}
+.phone-shell::before {content:'';position:absolute;top:13px;left:50%;transform:translateX(-50%);width:72px;height:7px;border-radius:8px;background:#a37880;}
+.phone-header {display:flex;justify-content:space-between;align-items:center;color:#fff3ef;padding:0 10px 12px;font:25px Parisienne,cursive;}
+.phone-shell video {display:block;width:100%;aspect-ratio:9/16;object-fit:contain;background:#000;border-radius:12px;}
+.phone-footer {display:flex;justify-content:space-between;gap:15px;color:#eed2d7;font-size:10px;padding:13px 8px 3px;}
+.phone-caption {margin:23px 0 0;font-size:13px;color:var(--muted);}
+.camera-gallery{text-align:center;padding:0 0 65px;}
+.camera-body{position:relative;width:min(800px,100%);margin:auto;}
+.camera-image{width:100%;height:auto;mix-blend-mode:multiply;}
+.camera-screen{position:absolute;left:31.1%;top:35.3%;width:37.3%;height:35%;background:#ead4d7;overflow:hidden;display:grid;place-items:center;}
+.camera-screen img{width:100%;height:100%;object-fit:contain;}
+.camera-next-hotspot{position:absolute;left:74%;top:54%;width:5%;height:9%;border:0;border-radius:50%;background:#eee9e5d9;color:#3b161e;font-size:16px;padding:0;}
+.camera-controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px;margin:5px 0 20px;}
+.camera-controls span{font-size:13px;}
+#camera-caption{font:22px var(--serif);}
+@media(max-width:760px){.camera-controls{gap:12px;}.camera-controls .button{font-size:11px;padding:10px 12px;}.camera-next-hotspot{font-size:11px;}}
+.guest-journal{width:min(850px,100%);margin:0 auto 70px;padding:18px;border-radius:12px;background:#af747d;box-shadow:0 14px 35px #3b161e20;}
+.journal-inner{position:relative;perspective:1500px;}
+.journal-sheet{min-height:570px;background:#fff9ef;border-radius:6px;padding:30px;box-shadow:inset 14px 0 15px -15px #3b161e70;}
+.journal-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px solid #deb5a7;background:#eed2d5;color:#5b2b38;}
+.journal-cover-title{font:64px Parisienne,cursive;}
+.journal-cover h2{font-size:38px;margin-top:24px;}
+.journal-cover>span[aria-hidden]{font-size:60px;}
+.journal-cover p{font:italic 20px Georgia,serif;}
+.journal-signing h2{font-size:36px;margin-bottom:18px;}
+.journal-signing iframe{width:100%;height:500px;border:1px solid #dcb9b4;background:#fff;display:block;margin-bottom:18px;}
+.journal-signing>a{font-size:12px;}
+.journal-controls{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 5px 0;color:#fff8f4;font-size:13px;}
+.journal-controls .button.secondary{color:#fff8f4;border-color:#f2d6d8;}
+.journal-controls button:disabled{opacity:.5;}
+@media(max-width:760px){.guest-journal{padding:10px;}.journal-sheet{padding:18px;min-height:480px;}.journal-controls{gap:8px;font-size:11px;}.journal-controls .button{font-size:11px;padding:10px;}.journal-cover-title{font-size:54px;}}

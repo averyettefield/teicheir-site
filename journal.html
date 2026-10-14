@@ -11,8 +11,8 @@
     <title>Journal — Teicheir</title>
     <link rel="icon" href="assets/rose-gold-t-logo.png" />
     <link rel="stylesheet" href="assets/site.css" />
-    <link rel="stylesheet" href="assets/creator.css?v=newspaper-flip-2" />
-    <script src="assets/site.js?v=newspaper-flip-2" defer></script>
+    <link rel="stylesheet" href="assets/creator.css?v=media-journal-5" />
+    <script src="assets/site.js?v=media-journal-5" defer></script>
   </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -44,52 +44,13 @@
       </div>
     </header>
     <main id="main" class="wrap">
-      <div class="page-heading">
-        <h1>Behind the content.</h1>
-        <p>Creator notes, ideas, and a closer look at the creative process.</p>
-      </div>
-      <section class="two-col">
-        <div>
-          <h2>The next idea starts here.</h2>
-          <p>No public entries yet. The first one will find its way here.</p>
-          <details>
-            <summary>A few things to write about</summary>
-            <p>
-              A game that stayed with you. A photo you keep returning to. A tiny
-              everyday ritual. Something you made just because.
-            </p>
-          </details>
+      <div class="page-heading"><h1>Leave a little note.</h1><p>A journal for everyone who stops by. Open it, sign it, and make yourself at home.</p></div>
+      <section class="guest-journal" aria-label="Teicheir guestbook journal">
+        <div class="journal-inner" id="guestbook-pages">
+          <section class="journal-sheet journal-cover" aria-label="Journal cover"><span class="journal-cover-title">Teicheir</span><h2>The guest journal</h2><span aria-hidden="true">♡</span><p>A little hello goes a long way.</p></section>
+          <section class="journal-sheet journal-signing" aria-label="Sign the guest journal" hidden><h2>Make your mark.</h2><iframe src="https://teicheir.atabook.org/" title="Teicheir public guestbook: read messages and sign" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><a href="https://teicheir.atabook.org/" target="_blank" rel="noopener noreferrer">Open the guestbook in a new tab ↗</a></section>
         </div>
-        <aside class="paper">
-          <h2>Your private draft.</h2>
-          <p class="draft-note">
-            This writing tool saves on this device only. It does not publish to
-            the website. Avoid using it for sensitive information on a shared
-            device.
-          </p>
-          <form id="draft-form">
-            <label for="draft-title">Title</label
-            ><input
-              id="draft-title"
-              name="title"
-              maxlength="180"
-              placeholder="A little thought…"
-            /><label for="draft-body">Your words</label
-            ><textarea
-              id="draft-body"
-              name="body"
-              placeholder="Start anywhere."
-              maxlength="100000"
-            ></textarea>
-            <p class="status" id="draft-status" role="status"></p>
-            <div class="actions">
-              <button class="button" type="submit">Download draft</button
-              ><button class="button secondary" type="button" id="clear-draft">
-                Clear draft
-              </button>
-            </div>
-          </form>
-        </aside>
+        <div class="journal-controls"><button class="button secondary" type="button" id="journal-close" disabled aria-controls="guestbook-pages">← Cover</button><span id="journal-page-status" role="status">Cover</span><button class="button" type="button" id="journal-open" aria-controls="guestbook-pages">Open journal →</button></div>
       </section>
     </main>
     <footer>

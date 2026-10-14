@@ -11,8 +11,8 @@
     <title>Photos — Teicheir</title>
     <link rel="icon" href="assets/rose-gold-t-logo.png" />
     <link rel="stylesheet" href="assets/site.css" />
-    <link rel="stylesheet" href="assets/creator.css?v=newspaper-flip-2" />
-    <script src="assets/site.js?v=newspaper-flip-2" defer></script>
+    <link rel="stylesheet" href="assets/creator.css?v=media-journal-5" />
+    <script src="assets/site.js?v=media-journal-5" defer></script>
   </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -48,45 +48,16 @@
         <h1>Through my lens.</h1>
         <p>Photography and visual content from the Teicheir perspective.</p>
       </div>
-      <section class="launch">
-        <h2>Find my photography on Instagram.</h2>
-        <p>
-          Explore my photography on Instagram. A selection of featured images
-          will be added here as the portfolio grows.
-        </p>
-        <a
-          class="button secondary"
-          href="https://www.instagram.com/teicheirs/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Visit @teicheirs ↗</a
-        >
+      <section class="camera-gallery" aria-label="Public photo gallery">
+        <div class="camera-body">
+          <img src="assets/camera-back.jpeg" class="camera-image" alt="Back of a silver digital camera" width="480" height="360">
+          <div class="camera-screen"><img id="camera-photo" src="assets/teicheir-home-cutout.png" alt="Teicheir in a denim jacket, dress, and cowboy boots"></div>
+          <button class="camera-next-hotspot" type="button" aria-label="Next photo on camera">→</button>
+        </div>
+        <div class="camera-controls"><button class="button secondary" id="camera-prev" type="button">← Previous photo</button><span id="camera-status" role="status">Photo 1 of 2</span><button class="button secondary" id="camera-next" type="button">Next photo →</button></div>
+        <p id="camera-caption">Denim, a dress, and cowboy boots.</p>
+        <a href="https://www.instagram.com/teicheirs/" target="_blank" rel="noopener noreferrer">More photography on Instagram ↗</a>
       </section>
-      <section class="local-tools">
-        <h2>Preview a visual selection.</h2>
-        <p>
-          A private preview, just for you. Selected photos stay in this browser
-          tab; they aren’t uploaded, saved, or added to the public site.
-        </p>
-        <label for="photo-upload">Choose photos to preview</label
-        ><input
-          id="photo-upload"
-          type="file"
-          accept="image/jpeg,image/png,image/webp,image/gif"
-          multiple
-        />
-        <p class="draft-note">
-          Up to 24 images, 15 MB each. Select a photo to view it larger.
-        </p>
-        <p class="status" id="photo-status" role="status"></p>
-        <div class="gallery" id="gallery"></div>
-        <button class="button secondary" id="clear-photos" type="button">
-          Clear previews
-        </button>
-      </section>
-      <dialog id="photo-dialog" aria-label="Photo preview">
-        <button class="close" type="button">Close preview</button><img alt="" />
-      </dialog>
     </main>
     <footer>
       <div class="wrap">

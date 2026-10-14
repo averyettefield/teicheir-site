@@ -10,6 +10,7 @@ const types = {
   ".jpeg": "image/jpeg",
   ".svg": "image/svg+xml",
   ".json": "application/json",
+  ".mp4": "video/mp4",
 };
 http
   .createServer((req, res) => {
