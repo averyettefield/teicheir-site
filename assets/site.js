@@ -281,7 +281,7 @@ if(journalSheets.length){
 
 const guestShelf=document.querySelector('#guest-book-shelf');
 if(guestShelf){
-  fetch('data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
+  fetch('https://averyettefield.github.io/teicheir-site/data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
     const entries=Array.isArray(data.entries)?data.entries:[];
     document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Open a cover to read.`:'No guest entries yet. Leave the first hello below.';
     entries.forEach((entry,index)=>{
