@@ -10,7 +10,8 @@
       "id": 2,
       "title": "Transitional glasses",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/glasses-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 3,
@@ -43,7 +44,8 @@
       "id": 7,
       "title": "Notebook",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-7-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 8,
@@ -55,13 +57,15 @@
       "id": 9,
       "title": "Lighter",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-9-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 10,
       "title": "Wallet",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-10-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -180
     },
     {
       "id": 11,
@@ -79,25 +83,29 @@
       "id": 13,
       "title": "Nintendo Switch",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-13-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 14,
       "title": "Makeup bag",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-14-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 15,
       "title": "Keys",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-15-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     },
     {
       "id": 16,
       "title": "Blender bottle",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-16-cutout.png",
-      "description": ""
+      "description": "",
+      "rotation": -90
     }
   ]
 }
