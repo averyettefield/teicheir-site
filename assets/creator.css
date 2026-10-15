@@ -1013,3 +1013,4 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .bag-opener{aspect-ratio:1317/1194;}.bag-opener img{width:100%;height:100%;object-fit:fill;}.bag-is-open .bag-opener{transform:none;}
 
 .bag-item-dialog img{aspect-ratio:1;height:min(420px,55vh);width:100%;object-fit:contain;}.bag-opener:focus-visible{transform:none;outline:2px dotted #74384d;outline-offset:8px;}@media(hover:hover) and (pointer:fine){.bag-is-open .bag-opener:hover{transform:translateY(-16px) rotate(-2deg) scale(1.07);}}
+.bag-item[aria-label="Nintendo Switch"] img{scale:1.4;}
