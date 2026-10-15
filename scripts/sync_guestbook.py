@@ -13,6 +13,8 @@ for message in soup.select("#messages .message"):
     text = message.select_one(".message-text")
     if text is None:
         continue
+    number = message.select_one(".message-num")
+    message_id = number.get_text(strip=True).lstrip("#") if number else None
     header = message.select_one(".split")
     author = "Guest"
     if header:
@@ -21,7 +23,7 @@ for message in soup.select("#messages .message"):
             for stamp in name.select(".message-time, .message-num"):
                 stamp.decompose()
             author = name.get_text(" ", strip=True) or "Guest"
-    entries.append({"name": author[:100], "message": text.get_text("\n", strip=True)[:10000]})
+    entries.append({"id": message_id, "name": author[:100], "message": text.get_text("\n", strip=True)[:10000]})
 if not entries and "No messages yet" not in soup.get_text():
     raise RuntimeError("Guestbook markup changed; preserve the previous public snapshot.")
 target = pathlib.Path(__file__).resolve().parents[1] / "data" / "guestbook.json"

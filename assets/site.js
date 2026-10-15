@@ -281,10 +281,13 @@ if(journalSheets.length){
 
 const guestShelf=document.querySelector('#guest-book-shelf');
 if(guestShelf){
-  fetch('https://averyettefield.github.io/teicheir-site/data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
-    const entries=Array.isArray(data.entries)?data.entries:[];
+  const booksById=new Map();let snapshot='',refreshing=false;
+  const refreshGuestBooks=()=>{if(refreshing)return;refreshing=true;return fetch('https://averyettefield.github.io/teicheir-site/data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
+    const entries=Array.isArray(data.entries)?data.entries:[];const nextSnapshot=JSON.stringify(entries);if(nextSnapshot===snapshot)return;snapshot=nextSnapshot;const activeIds=new Set();const occurrences=new Map();
     document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Turn a corner to read.`:'No guest entries yet. Leave the first hello below.';
     entries.forEach((entry,index)=>{
+      const fallback=JSON.stringify([entry.name,entry.message]);const occurrence=occurrences.get(fallback)||0;occurrences.set(fallback,occurrence+1);const key=entry.id||fallback+'#'+occurrence;activeIds.add(key);
+      if(booksById.has(key)){const existing=booksById.get(key);existing.querySelector('.guest-book-name').textContent=entry.name||'Guest';existing.querySelector('.guest-book-message p').textContent=entry.message||'';guestShelf.append(existing);return;}
       const book=document.createElement('article');book.className='guest-entry-book guest-flip-book';book.setAttribute('aria-label','Guest book from '+(entry.name||'Guest'));
       const cover=document.createElement('div');cover.className='guest-book-cover';
       const number=document.createElement('span');number.className='guest-book-number';number.textContent=`GUEST BOOK ${String(index+1).padStart(2,'0')}`;
@@ -298,9 +301,10 @@ if(guestShelf){
       const forward=document.createElement('button');forward.type='button';forward.className='guest-page-next';forward.setAttribute('aria-label','Read entry from '+(entry.name||'Guest'));
       const turn=open=>{cover.hidden=open;pages.hidden=!open;back.disabled=!open;forward.disabled=open;book.classList.toggle('guest-book-open',open);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(open?pages:cover).animate([{opacity:0,transform:'perspective(700px) rotateY('+(open?'-25':'25')+'deg)'},{opacity:1,transform:'rotateY(0deg)'}],{duration:450,easing:'ease-out'});(open?back:forward).focus();};
       forward.addEventListener('click',()=>turn(true));back.addEventListener('click',()=>turn(false));controls.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();turn(event.key==='ArrowRight');}});
-      controls.append(back,forward);book.append(cover,pages,controls);guestShelf.append(book);
-    });
-  }).catch(()=>{document.querySelector('#guest-books-status').textContent='';});
+      controls.append(back,forward);book.append(cover,pages,controls);guestShelf.append(book);booksById.set(key,book);
+    });for(const [key,book] of booksById){if(!activeIds.has(key)){book.remove();booksById.delete(key);}}
+  }).catch(()=>{if(!booksById.size)document.querySelector('#guest-books-status').textContent='';}).finally(()=>{refreshing=false;});};
+  refreshGuestBooks();setInterval(()=>{if(!document.hidden)refreshGuestBooks();},60000);window.addEventListener('focus',refreshGuestBooks);
 }
 
 // Swap outfits only while a mouse pointer is over the avatar image.
