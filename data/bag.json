@@ -46,7 +46,8 @@
       "title": "Notebook",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-7-cutout.png",
       "description": "",
-      "rotation": -90
+      "rotation": -90,
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/notebook-open.png"
     },
     {
       "id": 8,
@@ -66,7 +67,8 @@
       "title": "Wallet",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-10-cutout.png",
       "description": "",
-      "rotation": -180
+      "rotation": -180,
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/wallet-open.png"
     },
     {
       "id": 11,
