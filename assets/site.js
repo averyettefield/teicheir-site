@@ -281,29 +281,21 @@ if(journalSheets.length){
 
 const guestShelf=document.querySelector('#guest-book-shelf');
 if(guestShelf){
-  const booksById=new Map();let snapshot='',refreshing=false;
+  const book=document.createElement('article');book.className='shared-guestbook';book.setAttribute('aria-label','Teicheir shared guestbook');
+  const leaves=document.createElement('div');leaves.className='shared-guest-leaves';
+  const controls=document.createElement('div');controls.className='guest-page-controls';
+  const back=document.createElement('button');back.type='button';back.className='guest-page-prev';back.setAttribute('aria-label','Previous guestbook page');back.disabled=true;
+  const forward=document.createElement('button');forward.type='button';forward.className='guest-page-next';forward.setAttribute('aria-label','Next guestbook page');forward.disabled=true;
+  const pageStatus=document.createElement('span');pageStatus.className='guest-page-status';pageStatus.setAttribute('role','status');pageStatus.setAttribute('aria-live','polite');controls.append(back,pageStatus,forward);book.append(leaves,controls);guestShelf.append(book);
+  let pages=[],selected=0,snapshot='',refreshing=false;
+  const showPage=(target,animate=false)=>{if(target<0||target>=pages.length)return;selected=target;pages.forEach((page,index)=>{page.hidden=index!==selected;});back.disabled=selected===0;forward.disabled=selected===pages.length-1;pageStatus.textContent='Page '+(selected+1)+' of '+pages.length;if(animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches)pages[selected].animate([{opacity:0,transform:'perspective(1000px) rotateY(-25deg)'},{opacity:1,transform:'rotateY(0deg)'}],{duration:450,easing:'ease-out'});};
+  back.addEventListener('click',()=>{showPage(selected-1,true);if(back.disabled)forward.focus();});forward.addEventListener('click',()=>{showPage(selected+1,true);if(forward.disabled)back.focus();});controls.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();showPage(selected+(event.key==='ArrowRight'?1:-1),true);}});
   const refreshGuestBooks=()=>{if(refreshing)return;refreshing=true;return fetch('https://averyettefield.github.io/teicheir-site/data/guestbook.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Guestbook unavailable');return response.json();}).then(data=>{
-    const entries=Array.isArray(data.entries)?data.entries:[];const nextSnapshot=JSON.stringify(entries);if(nextSnapshot===snapshot)return;snapshot=nextSnapshot;const activeIds=new Set();const occurrences=new Map();
-    document.querySelector('#guest-books-status').textContent=entries.length?`${entries.length} guest book${entries.length===1?'':'s'}. Turn a corner to read.`:'No guest entries yet. Leave the first hello below.';
-    entries.forEach((entry,index)=>{
-      const fallback=JSON.stringify([entry.name,entry.message]);const occurrence=occurrences.get(fallback)||0;occurrences.set(fallback,occurrence+1);const key=entry.id||fallback+'#'+occurrence;activeIds.add(key);
-      if(booksById.has(key)){const existing=booksById.get(key);existing.querySelector('.guest-book-name').textContent=entry.name||'Guest';existing.querySelector('.guest-book-message p').textContent=entry.message||'';guestShelf.append(existing);return;}
-      const book=document.createElement('article');book.className='guest-entry-book guest-flip-book';book.setAttribute('aria-label','Guest book from '+(entry.name||'Guest'));
-      const cover=document.createElement('div');cover.className='guest-book-cover';
-      const number=document.createElement('span');number.className='guest-book-number';number.textContent=`GUEST BOOK ${String(index+1).padStart(2,'0')}`;
-      const name=document.createElement('span');name.className='guest-book-name';name.textContent=entry.name||'Guest';
-      const hint=document.createElement('span');hint.className='guest-book-hint';hint.textContent='Turn the corner to read';
-      cover.append(number,name,hint);
-      const pages=document.createElement('div');pages.className='guest-book-message';
-      const text=document.createElement('p');text.textContent=entry.message||'';pages.append(text);pages.hidden=true;
-      const controls=document.createElement('div');controls.className='guest-page-controls';
-      const back=document.createElement('button');back.type='button';back.className='guest-page-prev';back.setAttribute('aria-label','Return to cover of '+(entry.name||'Guest')+"'s book");back.disabled=true;
-      const forward=document.createElement('button');forward.type='button';forward.className='guest-page-next';forward.setAttribute('aria-label','Read entry from '+(entry.name||'Guest'));
-      const turn=open=>{cover.hidden=open;pages.hidden=!open;back.disabled=!open;forward.disabled=open;book.classList.toggle('guest-book-open',open);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(open?pages:cover).animate([{opacity:0,transform:'perspective(700px) rotateY('+(open?'-25':'25')+'deg)'},{opacity:1,transform:'rotateY(0deg)'}],{duration:450,easing:'ease-out'});(open?back:forward).focus();};
-      forward.addEventListener('click',()=>turn(true));back.addEventListener('click',()=>turn(false));controls.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();turn(event.key==='ArrowRight');}});
-      controls.append(back,forward);book.append(cover,pages,controls);guestShelf.append(book);booksById.set(key,book);
-    });for(const [key,book] of booksById){if(!activeIds.has(key)){book.remove();booksById.delete(key);}}
-  }).catch(()=>{if(!booksById.size)document.querySelector('#guest-books-status').textContent='';}).finally(()=>{refreshing=false;});};
+    const entries=Array.isArray(data.entries)?data.entries:[];const nextSnapshot=JSON.stringify(entries);if(nextSnapshot===snapshot)return;snapshot=nextSnapshot;const activeId=pages[selected]?.dataset.entryId||'cover';
+    const cover=document.createElement('div');cover.className='shared-guest-cover';cover.dataset.entryId='cover';const title=document.createElement('h2');title.textContent='Teicheir Guestbook';const count=document.createElement('p');count.textContent=entries.length+' little hello'+(entries.length===1?'':'s');const hint=document.createElement('span');hint.textContent='Turn the corner to read';cover.append(title,count,hint);pages=[cover];
+    entries.forEach((entry,index)=>{const page=document.createElement('div');page.className='shared-guest-entry';page.dataset.entryId=entry.id||JSON.stringify([entry.name,entry.message,index]);const label=document.createElement('span');label.className='shared-entry-number';label.textContent='HELLO '+String(index+1).padStart(2,'0');const name=document.createElement('h2');name.textContent=entry.name||'Guest';const message=document.createElement('p');message.textContent=entry.message||'';page.append(label,name,message);pages.push(page);});
+    leaves.replaceChildren(...pages);const keep=pages.findIndex(page=>page.dataset.entryId===activeId);showPage(keep<0?0:keep);document.querySelector('#guest-books-status').textContent=entries.length?entries.length+' message'+(entries.length===1?'':'s')+' in our shared guestbook.':'Be the first to leave a hello.';
+  }).catch(()=>{if(!pages.length)document.querySelector('#guest-books-status').textContent='Read and sign the guestbook below.';}).finally(()=>{refreshing=false;});};
   refreshGuestBooks();setInterval(()=>{if(!document.hidden)refreshGuestBooks();},60000);window.addEventListener('focus',refreshGuestBooks);
 }
 
