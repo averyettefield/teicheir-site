@@ -995,3 +995,19 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 @media(prefers-reduced-motion:reduce){.bag-opener{transition:none;}.bag-opener:hover,.bag-opener:focus-visible,.bag-is-open .bag-opener{transform:none;}}
 
 .bag-item-soon>span.bag-slot-title{font:19px/1.25 var(--serif);color:#74384d;}@media(max-width:760px){.bag-item-soon>span.bag-slot-title{font-size:17px;}}
+
+/* Loose belongings spill onto the page; detail cards appear only on selection. */
+.bag-stage{padding-bottom:10px;position:relative;z-index:2;}
+.bag-contents{margin-top:-20px;padding-top:0;}
+.bag-contents h2,.bag-contents #bag-ready-note{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+.bag-item-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 16px;margin:0 auto;width:min(1060px,100%);padding:15px 10px 35px;}
+.bag-item{position:relative;aspect-ratio:1;min-height:0;padding:8px;background:transparent;border:0;box-shadow:none;cursor:pointer;transform:translateY(var(--spill-offset,0px)) rotate(var(--spill-angle,0deg));transition:transform 220ms;}
+.bag-item img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 7px 5px #56334324);}
+.bag-item>span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+.bag-item:hover,.bag-item:focus-visible{z-index:3;transform:translateY(calc(var(--spill-offset,0px) - 8px)) rotate(0deg) scale(1.1);background:transparent;box-shadow:none;}
+.bag-item:focus-visible{outline:2px dotted #74384d;outline-offset:4px;}
+@media(hover:hover) and (pointer:fine){.bag-opener:hover{transform:translateY(-16px) rotate(-2deg) scale(1.07);}}
+@media(max-width:760px){.bag-item-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 4px;padding-inline:3px;}.bag-item{padding:3px;}.bag-contents{margin-top:0;}.bag-stage{padding-bottom:12px;}}
+@media(prefers-reduced-motion:reduce){.bag-item{transition:none;}.bag-item:hover,.bag-item:focus-visible{transform:translateY(var(--spill-offset,0px)) rotate(var(--spill-angle,0deg));}.bag-opener:hover{transform:none;}}
+
+.bag-opener{aspect-ratio:1317/1194;}.bag-opener img{width:100%;height:100%;object-fit:fill;}.bag-is-open .bag-opener{transform:none;}
