@@ -983,3 +983,4 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .heart-brief-content{padding-top:19%;}@media(max-width:760px){.heart-brief-content{padding-top:19%;}}
 
 .creator-site .heart-brief{background-image:url('cherry-lace-heart.svg?v=spacious-61');}@media(max-width:760px){.heart-brief .brief-list{font-size:clamp(10px,2.85vw,13px);line-height:1.15;margin:6px 0;}.heart-brief .brief-list li{margin-bottom:3px;}.creator-site .heart-brief h2{margin-bottom:6px;}}
+@media(min-width:761px){.heart-brief .brief-list li{padding:1px 0;}}
