@@ -16,13 +16,16 @@
       "id": 3,
       "title": "Minecraft cards",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-3.png",
-      "description": ""
+      "description": "",
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/minecraft-open.png",
+      "hoverRotation": -90
     },
     {
       "id": 4,
       "title": "Fan",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-4.png",
-      "description": ""
+      "description": "",
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/fan-open.png"
     },
     {
       "id": 5,
