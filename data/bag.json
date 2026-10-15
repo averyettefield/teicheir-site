@@ -26,7 +26,8 @@
       "title": "Fan",
       "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-4.png",
       "description": "",
-      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/fan-open.png"
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/fan-open.png",
+      "rotation": 90
     },
     {
       "id": 5,
