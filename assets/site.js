@@ -304,7 +304,7 @@ const aboutAvatar=document.querySelector('.avatar-hover img');
 if(aboutAvatar){
   const original=aboutAvatar.getAttribute('src');
   const originalAlt=aboutAvatar.alt;
-  const alternate='https://averyettefield.github.io/teicheir-site/assets/teicheir-about-cutout.png';
+  const alternate='https://averyettefield.github.io/teicheir-site/assets/optimized/teicheir-about-cutout.webp';
   const preload=new Image();preload.src=alternate;
   aboutAvatar.addEventListener('mouseenter',()=>{
     if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches)return;

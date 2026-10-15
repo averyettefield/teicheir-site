@@ -3,110 +3,110 @@
     {
       "id": 1,
       "title": "Earbuds",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/earbuds.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/earbuds.webp",
       "description": ""
     },
     {
       "id": 2,
       "title": "Transitional glasses",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/glasses-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/glasses-cutout.webp",
       "description": "",
       "rotation": -90
     },
     {
       "id": 3,
       "title": "Minecraft cards",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-3.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-3.webp",
       "description": "",
-      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/minecraft-open.png",
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/minecraft-open.webp",
       "hoverRotation": -90
     },
     {
       "id": 4,
       "title": "Fan",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-4.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-4.webp",
       "description": "",
-      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/fan-open.png",
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/fan-open.webp",
       "rotation": 90
     },
     {
       "id": 5,
       "title": "Pencil",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-5-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-5-cutout.webp",
       "description": ""
     },
     {
       "id": 6,
       "title": "Pen",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-6-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-6-cutout.webp",
       "description": ""
     },
     {
       "id": 7,
       "title": "Notebook",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-7-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-7-cutout.webp",
       "description": "",
       "rotation": -90,
-      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/notebook-open.png"
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/notebook-open.webp"
     },
     {
       "id": 8,
       "title": "Scrunchie",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-8-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-8-cutout.webp",
       "description": ""
     },
     {
       "id": 9,
       "title": "Lighter",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-9-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-9-cutout.webp",
       "description": "",
       "rotation": -90
     },
     {
       "id": 10,
       "title": "Wallet",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-10-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-10-cutout.webp",
       "description": "",
       "rotation": -180,
-      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/bag/wallet-open.png"
+      "hoverImage": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/wallet-open.webp"
     },
     {
       "id": 11,
       "title": "Beaded bracelet",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-11-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-11-cutout.webp",
       "description": ""
     },
     {
       "id": 12,
       "title": "Camera",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-12-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-12-cutout.webp",
       "description": ""
     },
     {
       "id": 13,
       "title": "Nintendo Switch",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-13-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-13-cutout.webp",
       "description": "",
       "rotation": -90
     },
     {
       "id": 14,
       "title": "Makeup bag",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-14-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-14-cutout.webp",
       "description": "",
       "rotation": -90
     },
     {
       "id": 15,
       "title": "Keys",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-15-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-15-cutout.webp",
       "description": "",
       "rotation": -90
     },
     {
       "id": 16,
       "title": "Blender bottle",
-      "image": "https://averyettefield.github.io/teicheir-site/assets/bag/item-16-cutout.png",
+      "image": "https://averyettefield.github.io/teicheir-site/assets/optimized/bag/item-16-cutout.webp",
       "description": "",
       "rotation": -90
     }

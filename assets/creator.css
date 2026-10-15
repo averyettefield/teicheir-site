@@ -1014,3 +1014,47 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .bag-item-dialog img{aspect-ratio:1;height:min(420px,55vh);width:100%;object-fit:contain;}.bag-opener:focus-visible{transform:none;outline:2px dotted #74384d;outline-offset:8px;}@media(hover:hover) and (pointer:fine){.bag-is-open .bag-opener:hover{transform:translateY(-16px) rotate(-2deg) scale(1.07);}}
 .bag-item[aria-label="Nintendo Switch"] img{scale:1.4;}
+
+/* Consistent, compact spacing with room for the personal objects. */
+.creator-site main.wrap{padding-bottom:36px;}
+.creator-site .header-row{min-height:76px;}
+.homepage-booklets{padding:32px 0 32px;gap:24px;}
+.creator-site .page-heading.about-intro{padding:30px 0 22px;}
+.creator-site .page-heading.about-intro p{max-width:850px;font-size:24px;line-height:1.5;}
+.about-orbit{gap:28px;padding-bottom:28px;}
+.about-copy p{font-size:18px;line-height:1.55;}
+.video-stage{padding:32px 0 24px;gap:28px;}
+.video-accent p{font-size:18px;line-height:1.5;}
+.phone-caption{margin-top:16px;}
+.bag-heading{padding-top:28px!important;}
+.bag-opener{width:min(520px,90%);}
+.bag-item-grid{width:min(940px,100%);gap:0 12px;padding-bottom:15px;}
+.bag-contents{padding-bottom:30px;}
+.creator-site footer{padding-top:18px;padding-bottom:18px;}
+.portfolio-projects #projects{padding:24px;margin-top:30px;}
+.creator-site .portfolio-projects h1{font:48px/1.1 var(--serif);letter-spacing:-1px;margin:0 0 12px;}
+.projects-intro{max-width:700px;font:19px/1.5 var(--serif);margin:0 0 28px;}
+.portfolio-projects .project-grid{align-items:start;gap:24px;}
+.portfolio-projects .project-body{padding:24px;}
+.creator-site .portfolio-projects .project-body h2{font:bold 29px/1.15 var(--serif);margin:10px 0 14px;}
+.portfolio-projects .project-body p,.portfolio-projects dd{font:17px/1.5 var(--serif);}
+.portfolio-projects dl{margin:20px 0;}.portfolio-projects dt{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8e526b;margin-top:12px;}.portfolio-projects dd{margin:3px 0 0;}
+.project-preview{display:block;height:210px;overflow:hidden;background:#fff7f8;border-bottom:1px solid #17152c;}.project-preview img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}.project-photo-preview img{object-position:center;}
+@media(max-width:760px){
+ .creator-site .wrap{width:calc(100% - 32px);}
+ .creator-site .header-row{min-height:68px;}
+ .creator-site nav a{min-height:42px;display:flex;align-items:center;justify-content:center;}
+ .creator-site button.menu{min-height:44px;min-width:64px;}
+ .homepage-booklets{padding:24px 0;gap:32px;max-width:390px;}
+ .homepage-booklets .brand-edit,.homepage-booklets .interactive-booklet{min-width:0;width:100%;}
+ .homepage-booklets .booklet-controls button,.homepage-booklets .newspaper-controls button{width:58px;height:58px;}
+ .creator-site .page-heading.about-intro{padding:26px 0 18px;}
+ .creator-site .page-heading.about-intro p{font-size:21px;}
+ .about-orbit{gap:24px;padding-bottom:16px;}.about-orbit .portrait{width:min(290px,calc(100% - 16px));}.about-copy h2{font-size:30px;}.about-copy p{font-size:18px;}
+ .video-stage{padding:24px 0 12px;gap:20px;}.video-stage .creator-phone{width:min(290px,100%);}.video-accent h2{font-size:31px;}.video-accent p{margin-bottom:0;font-size:17px;}.video-accent-right{grid-row:3;}.phone-shell{border-width:6px;padding-top:32px;}
+ .creator-site .page-heading.photo-heading{padding-top:24px;margin-bottom:-18px;}.photo-heading h1{font-size:42px;}.photo-heading p{font-size:17px;line-height:1.5;}.camera-controls{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;width:100%;}.camera-controls .button{min-height:44px;padding:7px 5px;font-size:12px;}.camera-controls #camera-status{font-size:12px;}
+ .bag-stage{padding-top:0;}.bag-opener{width:min(330px,94%);}.bag-item-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.bag-item{min-height:44px;}
+ .guest-book-shelf{padding-top:26px;}.shared-guestbook{width:min(310px,calc(100% - 14px));}.guest-signing iframe{width:100%;max-width:100%;}
+ .creator-site .portfolio-projects{width:calc(100% - 24px);}.portfolio-projects #projects{padding:16px;margin-top:24px;}.portfolio-projects .project-body{padding:20px;}.creator-site .portfolio-projects h1{font-size:38px;}.projects-intro{font-size:17px;}.project-preview{height:180px;}.portfolio-projects .project-window-bar{flex-direction:row;align-items:center;gap:8px;}.portfolio-projects .project-status{font-size:9px;}
+ .contact-banner{padding:26px 22px;}.creator-site .heart-brief{padding:32px 26px;}.creator-site footer .footer-row{gap:14px;}.creator-site footer .socials{gap:12px;flex-wrap:wrap;}.creator-site footer .footer-note{padding-right:55px;line-height:1.4;}
+}
