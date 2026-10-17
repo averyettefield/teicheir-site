@@ -1,10 +1,10 @@
-/* The brief lives inside the real screen of a transparent flip-phone cutout. */
-.brief-phone{position:relative;isolation:isolate;overflow:hidden;justify-self:center;width:min(340px,100%);aspect-ratio:424/1470;margin:0;align-self:start;}
-.brief-phone-art{position:absolute;display:block;width:241.51%;max-width:none;height:auto;left:-70.75%;top:0;pointer-events:none;}
-.brief-phone-screen{position:absolute;left:20.8%;top:13.15%;width:58.4%;height:21.7%;box-sizing:border-box;overflow:auto;overscroll-behavior:contain;padding:10px 9px;background:#fffdf2;color:#34252a;text-align:left;scrollbar-width:thin;scrollbar-color:#c9849c #fffdf2;font:14px/1.35 Georgia,serif;}
-.creator-site .brief-phone-screen h2{font:700 19px/1.05 Georgia,serif;letter-spacing:-.4px;margin:0 0 12px;text-align:center;}
-.brief-phone-screen .brief-list{margin:0 0 12px;padding-left:15px;font:13px/1.35 Georgia,serif;}.brief-phone-screen .brief-list li{margin-bottom:8px;padding:0;}
-.brief-phone-screen .draft-note{font:12px/1.35 Georgia,serif;margin:0 0 12px;color:#4b343e;}
-.brief-phone-screen .text-link{font:700 12px/1.35 Georgia,serif;color:#74384d;display:inline-block;padding-bottom:4px;}
-.brief-phone-screen:focus-visible{outline:2px solid #a94d71;outline-offset:2px;}
-@media(max-width:760px){.brief-phone{width:min(310px,100%);margin:0 auto;}.brief-phone-screen{padding:8px;font-size:13px;}.creator-site .brief-phone-screen h2{font-size:18px;}.brief-phone-screen .brief-list{font-size:12px;}.brief-phone-screen .draft-note,.brief-phone-screen .text-link{font-size:11px;}}
+/* Brief inside the vintage payphone's Local Call panel. */
+.brief-phone{position:relative;isolation:isolate;justify-self:center;width:min(540px,100%);aspect-ratio:2/3;margin:0;align-self:start;}
+.brief-phone-art{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;}
+.brief-phone-screen{position:absolute;left:36.9%;top:37%;width:30.1%;height:18.4%;box-sizing:border-box;overflow:auto;overscroll-behavior:contain;padding:8px 7px;background:#f5ead8;color:#34252a;text-align:left;scrollbar-width:thin;scrollbar-color:#b8817b #f5ead8;font:12px/1.35 Georgia,serif;}
+.creator-site .brief-phone-screen h2{font:700 16px/1.1 Georgia,serif;letter-spacing:-.3px;margin:0 0 9px;text-align:center;}
+.brief-phone-screen .brief-list{margin:0 0 9px;padding-left:13px;font:12px/1.35 Georgia,serif;}.brief-phone-screen .brief-list li{margin-bottom:7px;padding:0;}
+.brief-phone-screen .draft-note{font:11px/1.35 Georgia,serif;margin:0 0 9px;color:#4b343e;}
+.brief-phone-screen .text-link{font:700 11px/1.35 Georgia,serif;color:#74384d;display:inline-block;padding-bottom:4px;}
+.brief-phone-screen:focus-visible{outline:2px solid #a94d71;outline-offset:1px;}
+@media(max-width:760px){.brief-phone{width:min(540px,100%);margin:0 auto;}.brief-phone-screen{padding:4px;}.creator-site .brief-phone-screen h2{font-size:13px;}.brief-phone-screen .brief-list{font-size:11px;}.brief-phone-screen .draft-note,.brief-phone-screen .text-link{font-size:10px;}}
