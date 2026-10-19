@@ -8,3 +8,14 @@
 .brief-phone-screen .text-link{font:700 11px/1.35 Georgia,serif;color:#74384d;display:inline-block;padding-bottom:4px;}
 .brief-phone-screen:focus-visible{outline:2px solid #a94d71;outline-offset:1px;}
 @media(max-width:760px){.brief-phone{width:min(540px,100%);margin:0 auto;}.brief-phone-screen{padding:4px;}.creator-site .brief-phone-screen h2{font-size:13px;}.brief-phone-screen .brief-list{font-size:11px;}.brief-phone-screen .draft-note,.brief-phone-screen .text-link{font-size:10px;}}
+
+@media(max-width:760px){
+.creator-site .contact-layout{display:flex;flex-direction:column;}
+.contact-layout .contact-intro{display:contents;}
+.contact-layout .contact-intro>h1{order:0;}
+.contact-layout .contact-intro>p{order:1;}
+.contact-layout .contact-intro>.actions{order:2;}
+.contact-layout .contact-intro>.draft-note{order:3;}
+.contact-layout>.brief-phone{order:4;align-self:center;}
+.contact-layout .contact-intro>.collab-formats{order:5;}
+}
