@@ -13,9 +13,9 @@
 .creator-site .contact-layout{display:flex;flex-direction:column;}
 .contact-layout .contact-intro{display:contents;}
 .contact-layout .contact-intro>h1{order:0;}
-.contact-layout .contact-intro>p{order:1;}
-.contact-layout .contact-intro>.actions{order:2;}
-.contact-layout .contact-intro>.draft-note{order:3;}
-.contact-layout>.brief-phone{order:4;align-self:center;}
+.contact-layout .contact-intro>p{order:2;}
+.contact-layout .contact-intro>.actions{order:3;}
+.contact-layout .contact-intro>.draft-note{order:4;}
+.contact-layout>.brief-phone{order:1;align-self:center;}
 .contact-layout .contact-intro>.collab-formats{order:5;}
 }
