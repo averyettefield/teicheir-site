@@ -1165,3 +1165,6 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .creator-site .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories h3{font-size:3.3cqw;}
 
 .homepage-booklets .interview-portraits img{transform:rotate(360deg);}
+
+.homepage-booklets .interview-portraits{height:47cqw;}
+.homepage-booklets .newspaper-services li{font-size:3.05cqw;padding:.55cqw 0;}
