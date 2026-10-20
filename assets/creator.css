@@ -1159,3 +1159,7 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .homepage-booklets .newspaper-page:nth-child(2) .newspaper-feature-photo img{height:60cqw;}
 .homepage-booklets .interview-portraits img{width:100%;height:100%;object-fit:cover;object-position:center;transform:rotate(180deg);}
+
+.homepage-booklets .newspaper-services li{font-size:2.7cqw;padding:.8cqw 0;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories p,.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories a{font-size:2.3cqw;}
+.creator-site .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories h3{font-size:3.3cqw;}
