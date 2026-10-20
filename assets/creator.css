@@ -1138,3 +1138,6 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .homepage-booklets .interview-portraits{position:relative;display:block;height:43cqw;overflow:hidden;}
 .homepage-booklets .interview-portraits img{position:absolute;left:50%;top:50%;width:43cqw;max-width:none;height:100cqw;object-fit:cover;object-position:center 35%;transform:translate(-50%,-50%) rotate(90deg);box-sizing:border-box;}
+
+.homepage-booklets .interview-portraits img{inset:0;left:0;top:0;width:100%;height:100%;transform:rotate(180deg);}
+.homepage-booklets .newspaper-feature-photo figcaption{display:block;width:100%;text-align:center;margin-inline:auto;box-sizing:border-box;}
