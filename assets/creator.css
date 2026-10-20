@@ -1062,3 +1062,11 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0;}@media(max-width:760px){.about-orbit{grid-template-columns:minmax(0,1fr);}.about-copy{min-width:0;max-width:100%;}.creator-site .portrait{max-width:100%;}}
 
 @media(min-width:1100px){.portfolio-projects .project-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;}.portfolio-projects .project-body{padding:22px;}.creator-site .portfolio-projects .project-body h2{font-size:27px;}}@media(min-width:761px) and (max-width:1099px){.portfolio-projects .project-card:last-child:nth-child(odd){grid-column:1/-1;}}
+
+/* A centered reading order on desktop mirrors the mobile homepage. */
+@media(min-width:761px){
+.creator-site .homepage-booklets{grid-template-columns:minmax(0,1fr);width:min(520px,100%);max-width:520px;margin:0 auto;gap:64px;padding:32px 0 48px;justify-items:center;}
+.creator-site .homepage-booklets .brand-edit{grid-column:1;grid-row:1;width:100%;margin:0;box-sizing:border-box;}
+.creator-site .homepage-booklets .traditional-booklet{grid-column:1;grid-row:2;width:88%;margin:0;}
+.creator-site .homepage-booklets .magazine-booklet{grid-column:1;grid-row:3;width:88%;margin:0;}
+}
