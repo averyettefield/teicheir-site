@@ -1148,3 +1148,11 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories{margin-top:2cqw;}
 .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories h3{font-size:2.7cqw;}
 .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories p,.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories a{font-size:1.9cqw;}
+
+/* Give the services and editorial links the main space on page two. */
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-feature-photo img{height:29cqw;}
+.creator-site .homepage-booklets .newspaper-services h3{font-size:4.6cqw;margin:2cqw 0;}
+.homepage-booklets .newspaper-services li{font-size:3.2cqw;line-height:1.3;padding:1.35cqw 0;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories{margin-top:3cqw;gap:2.8cqw;}
+.creator-site .homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories h3{font-size:3.8cqw;line-height:1.15;margin-bottom:1.2cqw;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories p,.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories a{font-size:2.7cqw;line-height:1.45;}
