@@ -1070,3 +1070,25 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .creator-site .homepage-booklets .traditional-booklet{grid-column:1;grid-row:2;width:88%;margin:0;}
 .creator-site .homepage-booklets .magazine-booklet{grid-column:1;grid-row:3;width:88%;margin:0;}
 }
+
+/* The Edit is the sole homepage feature. */
+.creator-site .homepage-booklets{display:block;width:min(900px,100%);max-width:900px;margin:0 auto;padding:24px 0 48px;}
+.creator-site .homepage-booklets .brand-edit{width:100%;margin:0;box-sizing:border-box;}
+@media(min-width:761px){
+.creator-site .homepage-booklets .brand-edit{padding:clamp(24px,4vw,48px);}
+.homepage-booklets .paper-masthead{font-size:clamp(36px,5vw,64px);}
+.homepage-booklets .paper-headline{font-size:clamp(36px,5vw,64px);}
+.homepage-booklets .paper-kicker{font-size:20px;}
+.homepage-booklets .paper-deck{font-size:20px;line-height:1.45;}
+.homepage-booklets .paper-edition,.homepage-booklets .paper-dateline{font-size:14px;}
+.homepage-booklets .paper-dateline>span:first-child{font-size:12px;}
+.homepage-booklets .paper-dateline em{font-size:18px;}
+.homepage-booklets .paper-lead-photo{height:420px;}
+.homepage-booklets .paper-cover-note{font-size:20px;}
+.creator-site .homepage-booklets .acl-note h3{font-size:18px;}
+.homepage-booklets .acl-note p{font-size:15px;line-height:1.5;}
+.homepage-booklets .newspaper-feature-photo img{height:400px;}
+.homepage-booklets .newspaper-stories h3{font-size:30px;}
+.homepage-booklets .newspaper-stories p{font-size:20px;}
+}
+@media(max-width:760px){.creator-site .homepage-booklets{max-width:500px;}}
