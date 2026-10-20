@@ -1135,3 +1135,6 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .creator-site .homepage-booklets .newspaper-services h3{font:bold 4cqw/1.2 Georgia,serif;text-align:center;margin:2cqw 0;}
 .homepage-booklets .newspaper-services ul{list-style:none;margin:0;padding:0;}
 .homepage-booklets .newspaper-services li{font:2.5cqw/1.35 Georgia,serif;text-align:center;border-top:1px solid #bfbab0;padding:1.3cqw 0;}
+
+.homepage-booklets .interview-portraits{position:relative;display:block;height:43cqw;overflow:hidden;}
+.homepage-booklets .interview-portraits img{position:absolute;left:50%;top:50%;width:43cqw;max-width:none;height:100cqw;object-fit:cover;object-position:center 35%;transform:translate(-50%,-50%) rotate(90deg);box-sizing:border-box;}
