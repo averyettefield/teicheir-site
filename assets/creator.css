@@ -1092,3 +1092,41 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .newspaper-stories p{font-size:20px;}
 }
 @media(max-width:760px){.creator-site .homepage-booklets{max-width:500px;}}
+
+/* Scale the newspaper's content with its page, across all three leaves. */
+.creator-site .homepage-booklets .brand-edit{container-type:inline-size;padding:4%;}
+.homepage-booklets .newspaper-pages{position:relative;}
+.homepage-booklets .newspaper-page{box-sizing:border-box;}
+.homepage-booklets .newspaper-cover-front{display:flex;flex-direction:column;height:100%;overflow:hidden;}
+.homepage-booklets .paper-edition{font-size:1.5cqw;padding:.8cqw 0;flex-shrink:0;}
+.homepage-booklets .paper-masthead{font-size:7cqw;line-height:1.05;padding:1.5cqw 0;letter-spacing:-.2cqw;flex-shrink:0;}
+.homepage-booklets .paper-dateline{padding:1cqw 0;font-size:1.4cqw;gap:.5cqw;flex-shrink:0;}
+.homepage-booklets .paper-dateline>span:first-child{font-size:1.25cqw;white-space:nowrap;}
+.homepage-booklets .paper-dateline em{font-size:2cqw;}
+.homepage-booklets .paper-kicker{font-size:2cqw;line-height:1.2;margin:1.4cqw 0 1cqw;flex-shrink:0;}
+.creator-site .homepage-booklets .paper-headline{font-size:5.9cqw;line-height:1.08;margin:0 0 1.2cqw;flex-shrink:0;}
+.homepage-booklets .paper-deck{font-size:2.15cqw;line-height:1.35;margin:0 0 1.5cqw;padding:0 0 1.2cqw;flex-shrink:0;}
+.homepage-booklets .paper-lead-photo{display:block;width:100%;height:0;min-height:0;flex:1 1 auto;object-fit:cover;object-position:center 17%;}
+.homepage-booklets .paper-cover-note{font-size:2cqw;line-height:1.35;margin:1.3cqw 0 0;padding-top:1cqw;flex-shrink:0;}
+.homepage-booklets .acl-note{margin-top:1cqw;padding-top:1cqw;flex-shrink:0;}
+.creator-site .homepage-booklets .acl-note h3{font-size:1.9cqw;line-height:1.2;margin:0 0 .5cqw;}
+.homepage-booklets .acl-note p{font-size:1.65cqw;line-height:1.4;}
+.homepage-booklets .newspaper-page:not(:first-child){padding:0 0 5cqw;overflow:hidden;}
+.homepage-booklets .edit-top{font-size:4.8cqw;margin-bottom:2cqw;}
+.homepage-booklets .newspaper-feature-photo{margin:0 0 2cqw;}
+.homepage-booklets .newspaper-feature-photo img{height:60cqw;width:100%;object-fit:cover;}
+.homepage-booklets .newspaper-feature-photo figcaption{font-size:2cqw;}
+.homepage-booklets .newspaper-stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2cqw;column-count:auto;}
+.homepage-booklets .newspaper-stories article{padding:1.5cqw 0;min-width:0;}
+.creator-site .homepage-booklets .newspaper-stories h3{font-size:3cqw;line-height:1.15;}
+.homepage-booklets .newspaper-stories p,.homepage-booklets .newspaper-stories a{font-size:2.1cqw;line-height:1.45;}
+.homepage-booklets .interview-edition{font-size:1.5cqw;padding-bottom:1cqw;}
+.creator-site .homepage-booklets .newspaper-interview h2{font-size:5.5cqw;line-height:1.05;margin:2cqw 0;}
+.homepage-booklets .interview-portraits img{height:37cqw;object-position:center 35%;}
+.homepage-booklets .interview-intro{font-size:2cqw;line-height:1.4;margin:1.5cqw 0;padding-bottom:1cqw;}
+.homepage-booklets .interview-qa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2cqw;}
+.homepage-booklets .interview-qa article{padding:1cqw 0;}
+.creator-site .homepage-booklets .interview-qa h3{font-size:2.1cqw;line-height:1.25;margin-bottom:.6cqw;}
+.homepage-booklets .interview-qa p{font-size:1.85cqw;line-height:1.45;text-align:left;}
+.homepage-booklets .interview-more{margin-top:2cqw;}
+.homepage-booklets .newspaper-controls button{width:7cqw;height:7cqw;}
