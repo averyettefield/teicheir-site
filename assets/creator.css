@@ -1141,3 +1141,10 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .homepage-booklets .interview-portraits img{inset:0;left:0;top:0;width:100%;height:100%;transform:rotate(180deg);}
 .homepage-booklets .newspaper-feature-photo figcaption{display:block;width:100%;text-align:center;margin-inline:auto;box-sizing:border-box;}
+
+.homepage-booklets .interview-portraits img{transform:rotate(0deg);}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-feature-photo img{height:45cqw;}
+.homepage-booklets .newspaper-services li{font-size:2.2cqw;padding:.8cqw 0;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories{margin-top:2cqw;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories h3{font-size:2.7cqw;}
+.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories p,.homepage-booklets .newspaper-page:nth-child(2) .newspaper-stories a{font-size:1.9cqw;}
