@@ -1130,3 +1130,8 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .interview-qa p{font-size:1.85cqw;line-height:1.45;text-align:left;}
 .homepage-booklets .interview-more{margin-top:2cqw;}
 .homepage-booklets .newspaper-controls button{width:7cqw;height:7cqw;}
+
+.homepage-booklets .interview-portraits img{object-fit:contain;object-position:center;background:#fffdf6;}
+.creator-site .homepage-booklets .newspaper-services h3{font:bold 4cqw/1.2 Georgia,serif;text-align:center;margin:2cqw 0;}
+.homepage-booklets .newspaper-services ul{list-style:none;margin:0;padding:0;}
+.homepage-booklets .newspaper-services li{font:2.5cqw/1.35 Georgia,serif;text-align:center;border-top:1px solid #bfbab0;padding:1.3cqw 0;}
