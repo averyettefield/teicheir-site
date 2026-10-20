@@ -1122,7 +1122,7 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .newspaper-stories p,.homepage-booklets .newspaper-stories a{font-size:2.1cqw;line-height:1.45;}
 .homepage-booklets .interview-edition{font-size:1.5cqw;padding-bottom:1cqw;}
 .creator-site .homepage-booklets .newspaper-interview h2{font-size:5.5cqw;line-height:1.05;margin:2cqw 0;}
-.homepage-booklets .interview-portraits img{height:37cqw;object-position:center 35%;}
+.homepage-booklets .interview-portraits img{height:43cqw;object-position:center 35%;}
 .homepage-booklets .interview-intro{font-size:2cqw;line-height:1.4;margin:1.5cqw 0;padding-bottom:1cqw;}
 .homepage-booklets .interview-qa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2cqw;}
 .homepage-booklets .interview-qa article{padding:1cqw 0;}
