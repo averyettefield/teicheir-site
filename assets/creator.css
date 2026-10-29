@@ -1173,3 +1173,17 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .newspaper-services li{padding:1.05cqw 0;}
 
 .homepage-booklets .interview-portraits{height:54cqw;}
+
+/* Keep the complete camera shell within a narrow viewport. */
+@media(max-width:760px){.creator-site .camera-gallery{overflow:visible;}.creator-site .camera-body{transform:none;width:100%;max-width:100%;margin:0 auto;}.creator-site .camera-image{width:100%;max-width:100%;height:auto;object-fit:contain;}.creator-site .photo-heading{display:block;text-align:center;width:100%;}.creator-site .photo-heading>*{text-align:center;}}
+.guest-direct-link{text-align:center;margin:18px auto 24px;}.guest-direct-link p{margin:0;}.creator-site .guest-signing{border-top:1px solid var(--line);padding-top:28px;}
+.shared-guestbook{transform-style:preserve-3d;transform:perspective(1400px) rotateY(-9deg);transition:transform .65s ease;box-shadow:14px 18px 24px #63313c25;border-radius:4px 13px 13px 4px;isolation:isolate;}
+.shared-guestbook:hover,.shared-guestbook.guestbook-open{transform:perspective(1400px) rotateY(0deg);}
+.shared-guestbook::before{content:'';position:absolute;inset:7px -10px 6px 12px;background:repeating-linear-gradient(to bottom,#fffdf6 0 3px,#dbd1c1 3px 4px);border:1px solid #c9bca9;border-radius:0 10px 10px 0;transform:translateZ(-5px);z-index:-1;}
+.shared-guestbook::after{content:'';position:absolute;left:-7px;top:0;bottom:0;width:18px;background:linear-gradient(90deg,#814653,#b67584 55%,#8e4f60);border-radius:4px 0 0 4px;transform:translateZ(-2px);z-index:-1;}
+.shared-guest-cover,.guest-cover-flap{background:linear-gradient(90deg,#aa6c7b 0,#dbaebb 6%,#edcbd1 12%,#f4d7de 75%,#deb4c0);border:1px solid #b17d8b!important;box-shadow:inset 7px 0 8px #68334235,inset -2px 0 2px #fff7;cursor:pointer;}
+.shared-guest-cover::before,.guest-cover-flap::before{content:'';position:absolute;inset:18px;border:3px double #a76d80;border-radius:2px 8px 8px 2px;pointer-events:none;}
+.shared-guest-cover:focus-visible{outline:3px solid #74384d;outline-offset:5px;}
+.guest-cover-flap{position:absolute;inset:0;padding:30px;display:flex;align-items:center;justify-content:center;text-align:center;transform-origin:left center;backface-visibility:hidden;z-index:20;border-radius:3px 12px 12px 3px;pointer-events:none;}
+.creator-site .guest-cover-flap h2{font:58px/1.15 Parisienne,cursive;color:#74384d;}
+@media(prefers-reduced-motion:reduce){.shared-guestbook{transition:none;transform:none;}}
