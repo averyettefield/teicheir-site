@@ -1187,3 +1187,20 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .guest-cover-flap{position:absolute;inset:0;padding:30px;display:flex;align-items:center;justify-content:center;text-align:center;transform-origin:left center;backface-visibility:hidden;z-index:20;border-radius:3px 12px 12px 3px;pointer-events:none;}
 .creator-site .guest-cover-flap h2{font:58px/1.15 Parisienne,cursive;color:#74384d;}
 @media(prefers-reduced-motion:reduce){.shared-guestbook{transition:none;transform:none;}}
+
+/* A tactile newspaper: layered stock, subtle folds, and hinged page turns. */
+.creator-site .homepage-booklets .brand-edit{isolation:isolate;perspective:1800px;border:1px solid #bcb5a8;border-radius:2px 4px 5px 2px;box-shadow:2px 3px 0 #eeeae0,4px 5px 0 #cfc8ba,6px 7px 0 #f5f1e7,0 18px 38px #4d332b24;background:#fffdf6 url('paper-grain.svg');transition:box-shadow .3s;}
+.creator-site .homepage-booklets .brand-edit:focus-visible{outline:2px solid #87485e;outline-offset:9px;}
+.homepage-booklets .brand-edit::after{content:'';position:absolute;inset:0;z-index:8;pointer-events:none;background:linear-gradient(90deg,transparent 49.4%,#766e5a0b 49.8%,#fff9 50%,#766e5a09 50.3%,transparent 50.8%),linear-gradient(180deg,transparent 49.4%,#7266500d 49.85%,#fff8 50%,#85775b09 50.4%,transparent 51%);border-radius:inherit;}
+.homepage-booklets .newspaper-cover-front,.homepage-booklets .newspaper-page:not(:first-child){background-color:#fffdf6;background-image:url('paper-grain.svg');}
+.homepage-booklets .newspaper-page:first-child{transition:none!important;}
+.homepage-booklets .newspaper-turn-sheet{position:absolute;inset:0;z-index:30;pointer-events:none;background:#fffdf6 url('paper-grain.svg');border:1px solid #c4bcae;box-shadow:14px 2px 30px #39281d35;transform-style:preserve-3d;backface-visibility:hidden;overflow:hidden;}
+.homepage-booklets .newspaper-turn-sheet .newspaper-turn-content{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;transform:none!important;opacity:1!important;min-height:0;box-sizing:border-box;}
+.homepage-booklets .newspaper-turn-sheet .newspaper-turn-content:not(:first-child),.homepage-booklets .newspaper-turn-sheet .newspaper-turn-content.newspaper-interview{padding:4%!important;}
+.homepage-booklets .newspaper-turn-sheet .newspaper-cover-back{display:none;}
+.homepage-booklets #newspaper-status{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:auto;height:auto;margin:0;padding:0;clip-path:none;overflow:visible;color:#6b6256;font:10px Georgia,serif;letter-spacing:.1em;pointer-events:none;}
+.homepage-booklets .newspaper-controls{z-index:40;}
+.homepage-booklets .newspaper-controls button::before{opacity:.24;transform:scale(.6);}
+.homepage-booklets .newspaper-controls button:focus-visible{outline:2px solid #87485e;outline-offset:2px;}
+@media(hover:hover){.creator-site .homepage-booklets .brand-edit:hover{box-shadow:2px 3px 0 #eeeae0,4px 5px 0 #cfc8ba,6px 7px 0 #f5f1e7,0 22px 44px #4d332b30;}}
+@media(prefers-reduced-motion:reduce){.creator-site .homepage-booklets .brand-edit{transition:none;}}

@@ -216,40 +216,42 @@ document.querySelectorAll("[data-filter]").forEach((button) =>
 
 const newspaperPages = [...document.querySelectorAll('.newspaper-page')];
 if (newspaperPages.length) {
-  const previous = document.querySelector('#newspaper-prev');
-  const next = document.querySelector('#newspaper-next');
-  const status = document.querySelector('#newspaper-status');
-  let page = 0;
-  function turnPage(target) {
-    if (target < 0 || target >= newspaperPages.length) return;
-    const direction = target > page ? 1 : -1;
-    newspaperPages[page].hidden = true;
-    page = target;
-    const current = newspaperPages[page];
-    current.hidden = false;
-    const cover = newspaperPages[0];
-    cover.hidden = false;
-    cover.inert = page !== 0;
-    cover.setAttribute("aria-hidden", String(page !== 0));
-    document.querySelector(".brand-edit").classList.toggle("newspaper-open", page !== 0);
-    if (!dustMotion.matches && page !== 0) current.animate([
-      { opacity: 0, transform: `perspective(900px) rotateY(${direction * 32}deg)` },
-      { opacity: 1, transform: 'perspective(900px) rotateY(0deg)' }
-    ], { duration: 420, easing: 'ease-out' });
-    previous.disabled = page === 0;
-    next.disabled = page === newspaperPages.length - 1;
-    status.textContent = `Page ${page + 1} of ${newspaperPages.length}`;
-    if (document.activeElement === next && next.disabled) previous.focus();
-    if (document.activeElement === previous && previous.disabled) next.focus();
-  }
-  previous.addEventListener('click', () => turnPage(page - 1));
-  next.addEventListener('click', () => turnPage(page + 1));
-  document.querySelector('.newspaper-controls').addEventListener('keydown', event => {
-    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-      event.preventDefault();
-      turnPage(page + (event.key === 'ArrowRight' ? 1 : -1));
+  const sheet=document.querySelector('.brand-edit');
+  const previous=document.querySelector('#newspaper-prev'),next=document.querySelector('#newspaper-next'),status=document.querySelector('#newspaper-status');
+  let page=0,turning=false,touchStart=null;
+  sheet.tabIndex=0;sheet.setAttribute('aria-roledescription','interactive newspaper');
+  sheet.setAttribute('aria-label','The Teicheir Edit. Turn the bottom corners, swipe left or right, or use the arrow keys to read three pages.');
+  function turnPage(target){
+    if(turning||target<0||target>=newspaperPages.length)return;
+    const direction=target>page?1:-1;
+    let ghost;
+    if(!dustMotion.matches){
+      ghost=document.createElement('div');ghost.className='newspaper-turn-sheet';ghost.inert=true;ghost.setAttribute('aria-hidden','true');
+      const copy=newspaperPages[page].cloneNode(true);copy.hidden=false;copy.removeAttribute('aria-hidden');copy.removeAttribute('inert');copy.classList.add('newspaper-turn-content');
+      copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));ghost.append(copy);sheet.append(ghost);turning=true;
     }
+    newspaperPages[page].hidden=true;page=target;
+    newspaperPages.forEach((leaf,index)=>{leaf.hidden=index!==page;});
+    const cover=newspaperPages[0];cover.hidden=false;cover.inert=page!==0;cover.setAttribute('aria-hidden',String(page!==0));
+    sheet.classList.toggle('newspaper-open',page!==0);sheet.dataset.page=String(page+1);
+    previous.disabled=page===0;next.disabled=page===newspaperPages.length-1;
+    status.textContent='Page '+(page+1)+' of '+newspaperPages.length;
+    if(ghost){
+      ghost.style.transformOrigin=direction>0?'left center':'right center';
+      ghost.animate([{transform:'rotateY(0deg)',opacity:1,filter:'brightness(1)'},{transform:'rotateY('+(-direction*75)+'deg)',opacity:1,filter:'brightness(.86)',offset:.7},{transform:'rotateY('+(-direction*112)+'deg)',opacity:0,filter:'brightness(.8)'}],{duration:780,easing:'cubic-bezier(.22,.55,.25,1)',fill:'forwards'}).finished.finally(()=>{ghost.remove();turning=false;});
+    }
+    if(document.activeElement===next&&next.disabled)previous.focus();
+    if(document.activeElement===previous&&previous.disabled)next.focus();
+  }
+  previous.addEventListener('click',()=>turnPage(page-1));next.addEventListener('click',()=>turnPage(page+1));
+  sheet.addEventListener('keydown',event=>{
+    if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();turnPage(page+(event.key==='ArrowRight'?1:-1));}
+    if(event.key==='Home'){event.preventDefault();turnPage(0);}
+    if(event.key==='End'){event.preventDefault();turnPage(newspaperPages.length-1);}
   });
+  sheet.addEventListener('touchstart',event=>{if(event.touches.length===1)touchStart={x:event.touches[0].clientX,y:event.touches[0].clientY};},{passive:true});
+  sheet.addEventListener('touchend',event=>{if(!touchStart||!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-touchStart.x,dy=event.changedTouches[0].clientY-touchStart.y;touchStart=null;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5)turnPage(page+(dx<0?1:-1));},{passive:true});
+  sheet.addEventListener('touchcancel',()=>{touchStart=null;},{passive:true});
 }
 
 const newspaperSheet = document.querySelector('.brand-edit');
