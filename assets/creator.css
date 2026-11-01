@@ -1204,3 +1204,6 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 .homepage-booklets .newspaper-controls button:focus-visible{outline:2px solid #87485e;outline-offset:2px;}
 @media(hover:hover){.creator-site .homepage-booklets .brand-edit:hover{box-shadow:2px 3px 0 #eeeae0,4px 5px 0 #cfc8ba,6px 7px 0 #f5f1e7,0 22px 44px #4d332b30;}}
 @media(prefers-reduced-motion:reduce){.creator-site .homepage-booklets .brand-edit{transition:none;}}
+
+.homepage-booklets .newspaper-cover-front{padding-bottom:calc(var(--sheet-padding-y,28px) + 24px);}
+.homepage-booklets .newspaper-turn-sheet .newspaper-turn-content:not([aria-label="Front page"]){padding:4%!important;}
