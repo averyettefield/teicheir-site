@@ -29,7 +29,34 @@
     <link rel="canonical" href="https://teicheir.page.gd/contact.html" />
     <meta property="og:url" content="https://teicheir.page.gd/contact.html" />
     <link rel="stylesheet" href="assets/brief-phone.css?v=5" />
-    <link rel="stylesheet" href="assets/mobile-layout.css?v=1" />
+    <style>
+/* Small-screen layout only. */
+@media (max-width: 760px) {
+  .creator-site .about-intro,
+  .creator-site .video-stage .video-accent,
+  .creator-site .camera-gallery .instagram-arrow { display: none; }
+
+  .creator-site .about-orbit .about-left { grid-row: 1; }
+  .creator-site .about-orbit .portrait { grid-row: 2; }
+  .creator-site .about-orbit .about-right { grid-row: 3; }
+  .creator-site .video-stage .creator-phone { grid-row: 1; }
+
+  .creator-site .guest-page { display: flex; flex-direction: column; }
+  .guest-page .guest-signing { order: 1; }
+  .guest-page #guest-books-status { order: 2; }
+  .guest-page .guest-direct-link { order: 3; }
+
+  .creator-site .contact-intro > p,
+  .creator-site .collab-formats,
+  .creator-site .collab-formats p,
+  .creator-site .contact-social,
+  .creator-site .contact-social p { text-align: center; margin-inline: auto; }
+  .creator-site .contact-intro > p,
+  .creator-site .contact-intro > .actions,
+  .creator-site .contact-intro > .collab-formats { align-self: center; max-width: 100%; }
+  .creator-site .contact-intro > .actions { justify-content: center; }
+}
+    </style>
   </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
