@@ -75,6 +75,23 @@
         clip-path: inset(50%);
       }
     </style>
+    <style>
+      .shared-guestbook.guestbook-open {
+        aspect-ratio: 933 / 1321;
+        background: transparent;
+      }
+      .shared-guestbook.guestbook-open::before,
+      .shared-guestbook.guestbook-open::after { content: none; }
+      .shared-guestbook .shared-guest-leaves > .shared-guest-entry {
+        background: url("assets/optimized/guestbook-open-pink.jpg") center / 100% 100% no-repeat;
+        border: 0;
+        clip-path: inset(0 round 3% 5% 5% 2% / 2% 4% 4% 1.5%);
+        padding: 10% 10% 22% 15%;
+        overscroll-behavior: contain;
+      }
+      .shared-guestbook .shared-guest-entry h2 { margin-block: 12px 14px; }
+      .shared-guestbook .shared-guest-entry p { line-height: 1.55; }
+    </style>
 </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
