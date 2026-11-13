@@ -1218,3 +1218,5 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .creator-site .mascot-charm { transform-origin: bottom right; }
 .creator-site .mascot-charm:hover { transform: scale(1.2); }
+
+.creator-site footer .footer-note { text-align: center; padding-inline: clamp(52px, 12vw, 85px); }
