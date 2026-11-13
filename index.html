@@ -46,8 +46,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      clip-path: inset(.7% 1% .65% 1.1% round 1.8%);
+      object-fit: fill;
     }
     .homepage-booklets .newspaper-turn-sheet:has(.newspaper-front-artwork) {
       background: none;
@@ -81,11 +80,10 @@
     .homepage-booklets .newspaper-profile-artwork img {
       display: block;
       position: absolute;
-      top: 50%;
+      inset: 0;
       width: 100%;
-      height: auto;
-      transform: translateY(-50%);
-      clip-path: inset(.85% 1.1% .85% 1.15% round 2.2%);
+      height: 100%;
+      object-fit: fill;
     }
     .homepage-booklets .newspaper-turn-sheet:has(.newspaper-profile-artwork) {
       background: none;
@@ -96,7 +94,12 @@
       clip-path: inset(50%);
     }
   </style>
-    <style>.homepage-booklets .newspaper-creative-profile img { clip-path: inset(.28% 1% .65% 1.05% round 1.65%); }</style>
+    <style>
+      .homepage-booklets .newspaper-front-artwork img,
+      .homepage-booklets .newspaper-profile-artwork img {
+        clip-path: inset(1% 1.2% round 1.65%);
+      }
+    </style>
 </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -131,25 +134,16 @@
           <div class="newspaper-pages" id="newspaper-pages">
           <section class="newspaper-page newspaper-front-artwork" aria-label="Front page">
           <div class="newspaper-cover-front">
-            <img src="assets/optimized/teicheir-edit-front-page.jpg" width="1024" height="1536" fetchpriority="high" alt="" aria-describedby="front-page-transcript">
+            <img src="assets/optimized/teicheir-edit-front-page-v2.jpg" width="1026" height="1536" fetchpriority="high" alt="" aria-describedby="front-page-transcript">
             <div class="sr-only" id="front-page-transcript">
               <h2>The Teicheir Edit</h2>
               <p>Digital edition. August First Twenty-Twenty-Six. Austin, Texas. Vol. 01.</p>
               <p>A celebration of creative expression.</p>
               <h3>Teicheir takes on the internet</h3>
-              <p>Photography, production, modeling, and creative direction — bringing ideas to life across digital, film, and editorial spaces.</p>
-              <h3>What Is Teicheir?</h3>
-              <p>A creative studio and personal brand focused on photography, film production, modeling, and digital storytelling.</p>
-              <h3>Focus Areas</h3>
-              <ul>
-                <li>Photography — Portraits, events, &amp; editorial</li>
-                <li>Production — Planning, filming, &amp; editing</li>
-                <li>Modeling — Editorial, campaign, &amp; creative</li>
-                <li>Creative Direction — Concept, design, &amp; visual identity</li>
-              </ul>
-              <p>Creative work for brands, events, and the internet.</p>
+              <p>Creative direction, digital strategy, marketing, and brand curation—bringing ideas into a world people can recognize and connect with.</p>
+              <p>Creative &amp; Digital Strategy. Through the Teicheir lens.</p>
               <h3>At ACL, behind the scenes</h3>
-              <p>At ACL, I stepped into the festival as press, bringing the same curiosity that shapes my creative work. Live events are full of stories: the energy of a crowd, the setting, and the small details that make a moment feel like it belongs to a place. My aim is to carry that atmosphere into visual content that feels personal and connected.</p>
+              <p>At ACL, I stepped into the festival as press, bringing the same curiosity that shapes my creative work. Live events are full of stories: the energy of a crowd, the setting, and the small details that make a moment feel like it belongs to a place. The experience brought my interests in media, live photography, and storytelling together.</p>
             </div>
           </div>
           <div class="newspaper-cover-back" aria-hidden="true"><div class="edit-top"><span>Behind the Content</span></div><h3>One creator.<br>Different sides.</h3><p>Gaming, lifestyle, and creative stories through the Teicheir lens.</p></div>
