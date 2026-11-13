@@ -35,9 +35,6 @@
   .creator-site .video-stage .video-accent,
   .creator-site .camera-gallery .instagram-arrow { display: none; }
 
-  .creator-site .about-orbit .about-left { grid-row: 1; }
-  .creator-site .about-orbit .portrait { grid-row: 2; }
-  .creator-site .about-orbit .about-right { grid-row: 3; }
   .creator-site .video-stage .creator-phone { grid-row: 1; }
 
   .creator-site .guest-page { display: flex; flex-direction: column; }
@@ -57,6 +54,14 @@
 }
     </style>
       <style>
+      .creator-site .about-orbit {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        padding-top: clamp(16px, 4vw, 40px);
+      }
+      .creator-site .about-copy { width: min(100%, 64ch); }
+      .creator-site #about-title { text-align: center; margin: 0 0 20px; }
+      .creator-site .about-copy p { text-align: left; }
       .creator-site .about-orbit .portrait {
         aspect-ratio: 2 / 3;
         border-radius: 0;
@@ -101,17 +106,17 @@
         </nav>
       </div>
     </header>
-    <main id="main" class="wrap"><h1 class="sr-only">About Teicheir</h1>
-      <div class="page-heading about-intro">
-        <p>
-          A creator connecting the internet, lifestyle, video, photo, technology, community, and so much more.
-        </p>
-      </div>
-      <section class="about-orbit" aria-label="Meet Teicheir">
-        <div class="about-copy about-left"><h2>Different interests.</h2><p>My content brings together gaming and vlogs on YouTube, spontaneous short videos on TikTok, and photography on Instagram.</p></div>
+    <main id="main" class="wrap">
+      <section class="about-orbit" aria-labelledby="about-title">
         <figure class="portrait avatar-hover"><img src="assets/optimized/teicheir-home-cutout.webp" alt="Teicheir in a denim jacket, dress, and cowboy boots" width="1086" height="1448"></figure>
-        <div class="about-copy about-right"><h2>One creative identity.</h2><p>This site brings those channels together and gives creative collaborators a place to get to know my style.</p><p>Gaming, video, photography — one creative identity, with room to keep experimenting.</p></div>
-      </section> </main>
+        <div class="about-copy">
+          <h1 id="about-title">About Me</h1>
+          <p>I'm a Texas-based creator with a love for gaming, filmmaking, photography, and just about anything that gives me an excuse to be creative. Under Teicheir, I share a little bit of everything: gaming and personal vlogs on YouTube, spontaneous videos and everyday humor on TikTok, and photography and visual storytelling on Instagram.</p>
+          <p>I've never been particularly interested in limiting myself to one kind of content. I enjoy experimenting with different ideas, documenting the ordinary and occasionally extraordinary parts of life, and finding new ways to express my perspective.</p>
+          <p>Teicheir is where all those interests come together. It's a personal creative space, a growing collection of my work, and a place to connect with people who might want to make something together.</p>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="wrap">
         <div class="footer-row">
