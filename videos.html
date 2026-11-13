@@ -14,31 +14,26 @@
     <link rel="stylesheet" href="assets/creator.css?v=polish-76" />
     <style>
 .video-stage .phone-shell {
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 2 / 3;
   padding: 0;
   border: 0;
-  border-radius: 18% / 9%;
-  background: #000 url("assets/optimized/rose-phone.jpg") center / 100% 100% no-repeat;
+  border-radius: 0;
+  background: transparent url("assets/optimized/video-phone-pink.jpg") center / 100% 100% no-repeat;
   box-shadow: none;
+  clip-path: shape(from 29% 1.5%, line to 72% 1.5%, curve to 90% 15% with 86% 1.5% / 90% 8%, line to 90% 24.7%, curve to 91.6% 26% with 91.6% 24.7% / 91.6% 25.5%, line to 91.6% 33.5%, curve to 90% 34.6% with 91.6% 34.4% / 90.7% 34.6%, line to 90% 36.2%, curve to 91.6% 37.5% with 91.4% 36.2% / 91.6% 36.8%, line to 91.6% 44.7%, curve to 90% 45.9% with 91.6% 45.5% / 90.7% 45.9%, line to 90% 85%, curve to 73% 99% with 90% 94% / 84% 99%, line to 26% 99%, curve to 8.5% 85% with 15% 99% / 8.5% 94%, line to 9% 15%, curve to 29% 1.5% with 9% 7% / 16% 1.5%, close);
+}
+@supports not (clip-path: shape(from 0 0, close)) {
+  .video-stage .phone-shell { clip-path: inset(1.5% 10% 1% 8.5% round 20% / 13%); }
 }
 .video-stage .phone-shell::before { content: none; }
 .video-stage .phone-shell video {
   position: absolute;
-  inset: 8.75% 7% 9%;
-  width: 86%;
-  height: 82.25%;
+  inset: 13.2% auto auto 17.4%;
+  width: 65%;
+  height: 72.15%;
   aspect-ratio: auto;
-  border-radius: 0;
-  object-fit: cover;
-  object-position: center top;
-}
-.video-stage .phone-footer {
-  position: absolute;
-  inset: auto 9% 6%;
-  align-items: center;
-  gap: 10px;
-  color: #fff3ef;
-  padding: 0;
+  border-radius: 8% / 5%;
+  object-fit: contain;
 }
     </style>
     <script src="assets/site.js?v=polish-74" defer></script>
@@ -116,7 +111,6 @@
         <aside class="creator-phone" aria-label="Featured Teicheir video">
           <div class="phone-shell">
             <video poster="assets/optimized/featured-video-poster.webp" controls playsinline preload="metadata" aria-label="Featured video uploaded by Teicheir"><source src="assets/teicheir-featured-web.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/teicheir-featured-web.mp4">Download it here.</a></video>
-            <div class="phone-footer"><span>@teicheir</span><span>01 / Featured</span></div>
           </div>
           <p class="phone-caption">A little moment from my feed.<br>Press play to watch.</p>
         </aside>

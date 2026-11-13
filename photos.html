@@ -57,7 +57,19 @@
   .creator-site .contact-intro > .actions { justify-content: center; }
 }
     </style>
-  </head>
+      <style>
+      .creator-site .camera-body { transform: none; margin: 0 auto; }
+      .creator-site .camera-image {
+        aspect-ratio: 2 / 1;
+        clip-path: polygon(11.5% 13%, 12% 10%, 14% 9%, 17% 8.7%, 17.2% 6.2%, 18% 4.8%, 29.4% 4.8%, 30.5% 5.7%, 31% 8.4%, 34.2% 8.4%, 34.5% 6.6%, 35.5% 5.2%, 60.4% 5.2%, 61.3% 7%, 61.5% 4%, 62.4% 2.6%, 64% 2.2%, 73% 2.2%, 74.7% 3.1%, 74.7% 10.3%, 75.5% 10.3%, 75.5% 6.4%, 77% 5%, 85.8% 5%, 87% 6%, 87% 10.6%, 88% 11%, 88.8% 13%, 89% 87%, 88.6% 92%, 87.7% 94.6%, 86% 95.5%, 14.7% 95.5%, 13% 94.5%, 12% 92%, 11.7% 89%, 11.6% 31%, 10.8% 28%, 10.7% 25%, 11.4% 22%);
+      }
+      .creator-site .camera-screen {
+        left: 16.35%; top: 25.2%; width: 50.1%; height: 62.8%;
+        background: #090808; border-radius: 2% / 3%;
+      }
+      .creator-site .camera-gallery .camera-controls { margin-top: 8px !important; }
+    </style>
+</head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
     <header>
@@ -89,7 +101,7 @@
       </div>
       <section class="camera-gallery" aria-label="Public photo gallery">
         <div class="camera-body">
-          <img src="assets/optimized/camera-shell-transparent.webp" class="camera-image" alt="Back of a silver digital camera" width="1448" height="1086">
+          <img src="assets/optimized/photo-camera-pink.jpg" class="camera-image" alt="Back of a rose-gold digital camera" width="1774" height="887">
           <div class="camera-screen"><img id="camera-photo" src="assets/optimized/gallery/photo-001.webp" alt="Teicheir photography, image 1"></div>
         </div>
         <div class="camera-controls"><button class="button secondary" id="camera-prev" type="button">← Previous photo</button><span id="camera-status" role="status">Photo 1 of 73</span><button class="button secondary" id="camera-next" type="button">Next photo →</button></div>

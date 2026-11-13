@@ -56,7 +56,26 @@
   .creator-site .contact-intro > .actions { justify-content: center; }
 }
     </style>
-  </head>
+      <style>
+      .shared-guestbook { aspect-ratio: 962 / 1240; }
+      .shared-guestbook .shared-guest-cover, .shared-guestbook .guest-cover-flap {
+        background: url("assets/optimized/guestbook-pink-cover.jpg") 49.2% 48.1% / 112.9% 116.8% no-repeat;
+        border: 0 !important;
+        border-radius: 3% 5% 4% 2%;
+        box-shadow: none;
+      }
+      .shared-guestbook .shared-guest-cover::before, .shared-guestbook .guest-cover-flap::before {
+        content: none;
+      }
+      .shared-guestbook .shared-guest-cover h2, .shared-guestbook .guest-cover-flap h2 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+      }
+    </style>
+</head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
     <header>
