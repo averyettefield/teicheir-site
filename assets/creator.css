@@ -1215,3 +1215,6 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
   padding-inline: clamp(52px, 12vw, 80px);
 }
 .creator-site footer .socials { justify-content: center; }
+
+.creator-site .mascot-charm { transform-origin: bottom right; }
+.creator-site .mascot-charm:hover { transform: scale(1.2); }
