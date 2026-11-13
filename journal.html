@@ -58,6 +58,12 @@
     </style>
       <style>
       .shared-guestbook { aspect-ratio: 962 / 1240; }
+      .shared-guestbook:not(.guestbook-open) {
+        background: transparent;
+        box-shadow: none;
+      }
+      .shared-guestbook:not(.guestbook-open)::before,
+      .shared-guestbook:not(.guestbook-open)::after { content: none; }
       .shared-guestbook .shared-guest-cover, .shared-guestbook .guest-cover-flap {
         background: url("assets/optimized/guestbook-pink-cover.jpg") 49.2% 48.1% / 112.9% 116.8% no-repeat;
         border: 0 !important;
