@@ -29,7 +29,36 @@
     <meta name="twitter:image:alt" content="Black-and-white halftone portrait of Teicheir" />
     <link rel="canonical" href="https://teicheir.page.gd/" />
     <meta property="og:url" content="https://teicheir.page.gd/" />
-  <style>.creator-site .traditional-cover,.creator-site .traditional-cover h2,.creator-site .traditional-cover em,.creator-site .traditional-cover p,.creator-site .traditional-cover span{color:#fff!important}</style></head>
+  <style>.creator-site .traditional-cover,.creator-site .traditional-cover h2,.creator-site .traditional-cover em,.creator-site .traditional-cover p,.creator-site .traditional-cover span{color:#fff!important}</style>
+  <style>
+    .creator-site .homepage-booklets .brand-edit:not(.newspaper-open) {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .homepage-booklets .brand-edit:not(.newspaper-open)::after { display: none; }
+    .homepage-booklets .newspaper-front-artwork,
+    .homepage-booklets .newspaper-front-artwork .newspaper-cover-front {
+      background: none;
+      padding: 0;
+    }
+    .homepage-booklets .newspaper-front-artwork img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      clip-path: inset(.7% 1% .65% 1.1% round 1.8%);
+    }
+    .homepage-booklets .newspaper-turn-sheet:has(.newspaper-front-artwork) {
+      background: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .homepage-booklets .brand-edit:not(.newspaper-open) #newspaper-status {
+      clip-path: inset(50%);
+    }
+  </style>
+</head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
     <header>
@@ -61,16 +90,28 @@
           aria-label="The Teicheir edit: gaming, lifestyle, creative"
         >
           <div class="newspaper-pages" id="newspaper-pages">
-          <section class="newspaper-page" aria-label="Front page">
+          <section class="newspaper-page newspaper-front-artwork" aria-label="Front page">
           <div class="newspaper-cover-front">
-            <div class="paper-edition"><span>Digital edition</span></div>
-            <div class="paper-masthead">The Teicheir Edit</div>
-            <div class="paper-dateline"><span>August First Twenty-Twenty-Six</span><em>AUSTIN, TEXAS</em><span>Vol. 01</span></div>
-            <p class="paper-kicker">A celebration of creative expression</p>
-            <h2 class="paper-headline">TEICHEIR TAKES ON THE INTERNET</h2>
-            <p class="paper-deck">Creative direction, digital strategy, marketing, and brand curation—bringing ideas into a world people can recognize and connect with.</p>
-            <img class="paper-lead-photo" src="assets/teicheir-interview-two.jpeg" alt="Black-and-white halftone portrait of Teicheir with long wavy hair" width="1205" height="1742">
-            <p class="paper-cover-note">Creative &amp; Digital Strategy<br><em>Through the Teicheir lens.</em></p><article class="acl-note"><h3>At ACL, behind the scenes</h3><p>At ACL, I stepped into the festival as press, bringing the same curiosity that shapes my creative work. Live events are full of stories: the energy of a crowd, the setting, and the small details that make a moment feel like it belongs to a place. My aim is to carry that atmosphere into visual content that feels personal and connected. The experience brought my interests in media, live photography, and storytelling together. This digital archive is a home for that perspective, alongside my design work, lifestyle content, and ideas for what comes next.</p></article>
+            <img src="assets/optimized/teicheir-edit-front-page.jpg" width="1024" height="1536" fetchpriority="high" alt="" aria-describedby="front-page-transcript">
+            <div class="sr-only" id="front-page-transcript">
+              <h2>The Teicheir Edit</h2>
+              <p>Digital edition. August First Twenty-Twenty-Six. Austin, Texas. Vol. 01.</p>
+              <p>A celebration of creative expression.</p>
+              <h3>Teicheir takes on the internet</h3>
+              <p>Photography, production, modeling, and creative direction — bringing ideas to life across digital, film, and editorial spaces.</p>
+              <h3>What Is Teicheir?</h3>
+              <p>A creative studio and personal brand focused on photography, film production, modeling, and digital storytelling.</p>
+              <h3>Focus Areas</h3>
+              <ul>
+                <li>Photography — Portraits, events, &amp; editorial</li>
+                <li>Production — Planning, filming, &amp; editing</li>
+                <li>Modeling — Editorial, campaign, &amp; creative</li>
+                <li>Creative Direction — Concept, design, &amp; visual identity</li>
+              </ul>
+              <p>Creative work for brands, events, and the internet.</p>
+              <h3>At ACL, behind the scenes</h3>
+              <p>At ACL, I stepped into the festival as press, bringing the same curiosity that shapes my creative work. Live events are full of stories: the energy of a crowd, the setting, and the small details that make a moment feel like it belongs to a place. My aim is to carry that atmosphere into visual content that feels personal and connected.</p>
+            </div>
           </div>
           <div class="newspaper-cover-back" aria-hidden="true"><div class="edit-top"><span>Behind the Content</span></div><h3>One creator.<br>Different sides.</h3><p>Gaming, lifestyle, and creative stories through the Teicheir lens.</p></div>
       </section>
