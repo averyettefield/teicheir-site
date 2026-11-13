@@ -67,7 +67,24 @@
         left: 16.35%; top: 25.2%; width: 50.1%; height: 62.8%;
         background: #090808; border-radius: 2% / 3%;
       }
-      .creator-site .camera-gallery .camera-controls { margin-top: 8px !important; }
+      .creator-site .camera-body .camera-arrow {
+        position: absolute;
+        top: 59.5%;
+        left: var(--camera-arrow-x);
+        width: max(9%, 24px);
+        height: max(22%, 24px);
+        transform: translate(-50%, -50%);
+        padding: 0;
+        border: 0;
+        border-radius: 45%;
+        background: transparent;
+        cursor: pointer;
+      }
+      .camera-body #camera-prev { --camera-arrow-x: 73%; }
+      .camera-body #camera-next { --camera-arrow-x: 81.7%; }
+      .creator-site .camera-body .camera-arrow:hover { background: #fff5ee35; }
+      .creator-site .camera-body .camera-arrow:active { background: #4a252d35; }
+      .creator-site .camera-body .camera-arrow:focus-visible { outline: 2px solid #4a252d; }
     </style>
 </head>
   <body class="creator-site">
@@ -103,8 +120,10 @@
         <div class="camera-body">
           <img src="assets/optimized/photo-camera-pink.jpg" class="camera-image" alt="Back of a rose-gold digital camera" width="1774" height="887">
           <div class="camera-screen"><img id="camera-photo" src="assets/optimized/gallery/photo-001.webp" alt="Teicheir photography, image 1"></div>
+          <button class="camera-arrow" id="camera-prev" type="button" aria-label="Previous photo" aria-controls="camera-photo"></button>
+          <button class="camera-arrow" id="camera-next" type="button" aria-label="Next photo" aria-controls="camera-photo"></button>
         </div>
-        <div class="camera-controls"><button class="button secondary" id="camera-prev" type="button">← Previous photo</button><span id="camera-status" role="status">Photo 1 of 73</span><button class="button secondary" id="camera-next" type="button">Next photo →</button></div>
+        <p class="sr-only" id="camera-status" role="status">Photo 1 of 73</p>
         <p id="camera-caption">From the Teicheir photo archive · 1</p>
         <a href="https://www.instagram.com/auroranete?srtk=MWVlNzB0eTltc2Jy&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">More photography on Instagram<span class="instagram-arrow" aria-hidden="true"> ↗</span></a>
       </section>
