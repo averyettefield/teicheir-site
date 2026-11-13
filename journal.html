@@ -95,8 +95,48 @@
         padding: 10% 10% 22% 15%;
         overscroll-behavior: contain;
       }
-      .shared-guestbook .shared-guest-entry h2 { margin-block: 12px 14px; }
-      .shared-guestbook .shared-guest-entry p { line-height: 1.55; }
+      .shared-guestbook { container-type: inline-size; }
+      .shared-guestbook .shared-guest-leaves > .shared-guest-entry {
+        padding: 3cqw 10% 22% 15%;
+        --guest-line: 7.35cqw;
+      }
+      .shared-guestbook .shared-entry-number,
+      .shared-guestbook .shared-guest-entry h2,
+      .shared-guestbook .shared-guest-entry p {
+        display: block;
+        margin: 0;
+        line-height: var(--guest-line);
+      }
+      .shared-guestbook .shared-guest-entry h2 {
+        font-size: 6.5cqw;
+        overflow-wrap: anywhere;
+      }
+      .shared-guestbook .shared-guest-entry p { font-size: 4.2cqw; }
+      .shared-guestbook .guest-page-controls { z-index: 21; }
+      .shared-guestbook .guest-page-controls button::before { content: none; }
+      .shared-guestbook .guest-page-controls::before {
+        content: "";
+        display: none;
+        position: absolute;
+        inset: auto 0 0;
+        height: 141.59cqw;
+        background: url("assets/optimized/guestbook-open-pink.jpg") center / 100% 100% no-repeat;
+        pointer-events: none;
+      }
+      .shared-guestbook .guest-page-controls:has(.guest-page-next:enabled:is(:hover, :focus-visible))::before {
+        display: block;
+        clip-path: polygon(87% 99%, 99% 90%, 99% 99%);
+      }
+      .shared-guestbook .guest-page-controls:has(.guest-page-prev:enabled:is(:hover, :focus-visible))::before {
+        display: block;
+        clip-path: polygon(1% 90%, 13% 99%, 1% 99%);
+      }
+      .shared-guestbook:has(.shared-guest-cover + .shared-guest-entry:not([hidden])) .guest-page-controls:has(.guest-page-prev:is(:hover, :focus-visible))::before {
+        background-image: url("assets/optimized/guestbook-pink-cover.jpg");
+        background-position: 49.2% 48.1%;
+        background-size: 112.9% 116.8%;
+      }
+
     </style>
 </head>
   <body class="creator-site">
