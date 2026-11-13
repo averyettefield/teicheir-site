@@ -56,7 +56,27 @@
   .creator-site .contact-intro > .actions { justify-content: center; }
 }
     </style>
-  </head>
+      <style>
+      .creator-site .about-orbit .portrait {
+        aspect-ratio: 2 / 3;
+        border-radius: 0;
+        background: transparent !important;
+      }
+      .creator-site .about-orbit .portrait::before {
+        content: "";
+        position: absolute;
+        inset: 13.6% 15.3% 15% 15.3%;
+        border-radius: 50%;
+        background: #efcdd2;
+        z-index: -1;
+      }
+      .creator-site .about-orbit .portrait::after {
+        inset: 0;
+        background-image: url("assets/optimized/about-oval-lace.png");
+      }
+      .creator-site .about-orbit .portrait img { height: 66%; margin-bottom: 1.4%; }
+    </style>
+</head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
     <header>
