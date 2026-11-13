@@ -220,7 +220,7 @@ if (newspaperPages.length) {
   const previous=document.querySelector('#newspaper-prev'),next=document.querySelector('#newspaper-next'),status=document.querySelector('#newspaper-status');
   let page=0,turning=false,touchStart=null;
   sheet.tabIndex=0;sheet.setAttribute('aria-roledescription','interactive newspaper');
-  sheet.setAttribute('aria-label','The Teicheir Edit. Turn the bottom corners, swipe left or right, or use the arrow keys to read three pages.');
+  sheet.setAttribute('aria-label','The Teicheir Edit. Turn the bottom corners, swipe left or right, or use the arrow keys to read the newspaper.');
   function turnPage(target){
     if(turning||target<0||target>=newspaperPages.length)return;
     const direction=target>page?1:-1;
