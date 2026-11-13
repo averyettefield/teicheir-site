@@ -100,6 +100,34 @@
         clip-path: inset(1% 1.2% round 1.65%);
       }
     </style>
+    <style>
+      .creator-site .homepage-booklets .newspaper-controls button::before {
+        content: none;
+      }
+      .creator-site .homepage-booklets .brand-edit::after {
+        display: none;
+        z-index: 9;
+        background: var(--corner-preview) center / 100% 100% no-repeat;
+      }
+      .homepage-booklets .brand-edit:not([data-page="3"]):has(#newspaper-next:is(:hover, :focus-visible):enabled) {
+        --corner-preview: url("assets/optimized/teicheir-edit-creator-profile-v2.jpg");
+        --corner-cut: polygon(90% 99%, 98.8% 92%, 98.8% 99%);
+      }
+      .homepage-booklets .brand-edit[data-page="2"]:has(#newspaper-next:is(:hover, :focus-visible):enabled) {
+        --corner-preview: url("assets/optimized/teicheir-edit-page-three-v2.jpg");
+      }
+      .homepage-booklets .brand-edit:has(#newspaper-prev:is(:hover, :focus-visible):enabled) {
+        --corner-preview: url("assets/optimized/teicheir-edit-front-page-v2.jpg");
+        --corner-cut: polygon(1.2% 92%, 10% 99%, 1.2% 99%);
+      }
+      .homepage-booklets .brand-edit[data-page="3"]:has(#newspaper-prev:is(:hover, :focus-visible):enabled) {
+        --corner-preview: url("assets/optimized/teicheir-edit-creator-profile-v2.jpg");
+      }
+      .creator-site .homepage-booklets .brand-edit:has(.newspaper-controls button:is(:hover, :focus-visible):enabled):not(:has(.newspaper-turn-sheet))::after {
+        display: block;
+        clip-path: var(--corner-cut);
+      }
+    </style>
 </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
