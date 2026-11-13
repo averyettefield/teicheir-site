@@ -1207,3 +1207,11 @@ html,body.creator-site{background-color:#fce8ef;background-image:none;}
 
 .homepage-booklets .newspaper-cover-front{padding-bottom:calc(var(--sheet-padding-y,28px) + 24px);}
 .homepage-booklets .newspaper-turn-sheet .newspaper-turn-content:not([aria-label="Front page"]){padding:4%!important;}
+
+/* Center the footer links, with equal space on both sides of the mascot. */
+.creator-site footer .footer-row {
+  justify-content: center;
+  align-items: center;
+  padding-inline: clamp(52px, 12vw, 80px);
+}
+.creator-site footer .socials { justify-content: center; }
