@@ -58,6 +58,42 @@
       clip-path: inset(50%);
     }
   </style>
+
+  <style>
+    .creator-site .homepage-booklets .brand-edit[data-page="2"] {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .homepage-booklets .brand-edit[data-page="2"]::after { display: none; }
+    .homepage-booklets .newspaper-pages > .newspaper-profile-artwork {
+      position: absolute;
+      top: calc(-1 * var(--sheet-padding-y, 0px));
+      left: calc(-1 * var(--sheet-padding-x, 0px));
+      width: var(--sheet-width, 100%);
+      height: var(--sheet-height, 100%);
+    }
+    .homepage-booklets .newspaper-page.newspaper-profile-artwork:not(:first-child),
+    .homepage-booklets .newspaper-turn-sheet .newspaper-profile-artwork {
+      padding: 0 !important;
+      background: none;
+    }
+    .homepage-booklets .newspaper-profile-artwork img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      clip-path: inset(.85% 1.1% .85% 1.15% round 2.2%);
+    }
+    .homepage-booklets .newspaper-turn-sheet:has(.newspaper-profile-artwork) {
+      background: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .homepage-booklets .brand-edit[data-page="2"] #newspaper-status {
+      clip-path: inset(50%);
+    }
+  </style>
 </head>
   <body class="creator-site">
     <a class="skip" href="#main">Skip to content</a>
@@ -115,10 +151,8 @@
           </div>
           <div class="newspaper-cover-back" aria-hidden="true"><div class="edit-top"><span>Behind the Content</span></div><h3>One creator.<br>Different sides.</h3><p>Gaming, lifestyle, and creative stories through the Teicheir lens.</p></div>
       </section>
-          <section class="newspaper-page" aria-label="Inside the edit" hidden>
-            <div class="edit-top"><span>Inside the Edit</span></div>
-            <figure class="newspaper-feature-photo"><img src="assets/optimized/teicheir-edit-page-two.webp" alt="Black-and-white halftone portrait at an outdoor event with a city skyline" width="1565" height="1005"><figcaption>Event Marketing &amp; Planning from the Teicheir lens.</figcaption></figure>
-            <div class="newspaper-services"><h3>Services</h3><ul><li>Creative direction</li><li>Brand identity and curation</li><li>Campaign concepts</li><li>Content strategy and creation</li><li>Event marketing and management</li><li>Videography and photography</li><li>Digital experiences &amp; assistance</li></ul></div><div class="newspaper-stories"><article><h3>Press play.</h3><p>Gaming, vlogs, and short videos — find the latest on my channels.</p><a href="videos.html">Explore videos →</a></article><article><h3>Through my eyes.</h3><p>Photography and everyday details from the Teicheir perspective.</p><a href="photos.html">See photography →</a></article><article><h3>A new idea starts here.</h3><p>Creative projects and a place to connect.</p><a href="projects.html">Explore services →</a> · <a href="contact.html">Connect →</a></article></div>
+          <section class="newspaper-page newspaper-profile-artwork" aria-label="Creator profile" hidden>
+            <img src="assets/optimized/teicheir-edit-creator-profile.jpg" width="1055" height="1491" alt="In conversation with Teicheir. A black-and-white portrait, six interview questions, and a creative focus on photography, production, modeling, creative direction, and content creation in Austin, Texas. The interview is also available as text on page three.">
           </section>
           <section class="newspaper-page newspaper-interview" aria-label="In conversation with Teicheir" hidden>
             <div class="interview-edition">THE TEICHEIR EDIT · CREATOR PROFILE</div>
